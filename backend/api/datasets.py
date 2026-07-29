@@ -22,7 +22,7 @@ async def upload_dataset(file: UploadFile = File(...), db: Session = Depends(get
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
-@router.post("/upload_sample", response_model=DatasetSummary)
+@router.api_route("/upload_sample", methods=["GET", "POST"], response_model=DatasetSummary)
 def upload_sample_dataset(db: Session = Depends(get_db)):
     """Auto-loads built-in sample dataset for 1-click web demo."""
     sample_path = "data/sample_pharma_sales.csv"
