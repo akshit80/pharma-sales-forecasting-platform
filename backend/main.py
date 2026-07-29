@@ -1,5 +1,5 @@
 import os
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
 from backend.database.database import Base, engine
@@ -258,9 +258,11 @@ def get_html_dashboard():
     """
 
 @app.get("/", response_class=HTMLResponse)
-def serve_dashboard():
-    return get_html_dashboard()
+def serve_root():
+    return HTMLResponse(content=get_html_dashboard())
 
-@app.get("/api/index.py", response_class=HTMLResponse)
-def serve_dashboard_vercel_rewrite():
-    return get_html_dashboard()
+@app.get("/{full_path:path}", response_class=HTMLResponse)
+def serve_fallback(request: Request, full_path: str):
+    if full_path.startswith("api/") or full_path.startswith("docs") or full_path.startswith("openapi"):
+        return HTMLResponse(content='{"detail": "Not Found"}', status_code=404)
+    return HTMLResponse(content=get_html_dashboard())
