@@ -22,9 +22,7 @@ async def upload_dataset(file: UploadFile = File(...), db: Session = Depends(get
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
-@router.api_route("/upload_sample", methods=["GET", "POST"], response_model=DatasetSummary)
-def upload_sample_dataset(db: Session = Depends(get_db)):
-    """Auto-loads built-in sample dataset for 1-click web demo."""
+def _do_upload_sample(db: Session):
     sample_path = "data/sample_pharma_sales.csv"
     if not os.path.exists(sample_path):
         from data.generate_sample_data import generate_sample_dataset
@@ -34,6 +32,16 @@ def upload_sample_dataset(db: Session = Depends(get_db)):
         content = f.read()
     
     return IngestionService.process_csv_file(db, content, "sample_pharma_sales.csv")
+
+@router.post("/upload_sample", response_model=DatasetSummary)
+def upload_sample_dataset_post(db: Session = Depends(get_db)):
+    """Auto-loads built-in sample dataset for 1-click web demo (POST)."""
+    return _do_upload_sample(db)
+
+@router.get("/upload_sample", response_model=DatasetSummary)
+def upload_sample_dataset_get(db: Session = Depends(get_db)):
+    """Auto-loads built-in sample dataset for 1-click web demo (GET)."""
+    return _do_upload_sample(db)
 
 @router.get("/", response_model=List[DatasetSummary])
 def list_datasets(db: Session = Depends(get_db)):
