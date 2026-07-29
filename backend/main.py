@@ -22,7 +22,21 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Include router for both /api/v1 and root paths for Vercel rewrite compatibility
 app.include_router(api_router)
+
+# Direct dataset routes without prefix fallback for Vercel
+from backend.api.datasets import router as datasets_router
+from backend.api.eda import router as eda_router
+from backend.api.forecast import router as forecast_router
+from backend.api.scenarios import router as scenarios_router
+from backend.api.reports import router as reports_router
+
+app.include_router(datasets_router)
+app.include_router(eda_router)
+app.include_router(forecast_router)
+app.include_router(scenarios_router)
+app.include_router(reports_router)
 
 def get_html_dashboard():
     return """
@@ -161,10 +175,22 @@ def get_html_dashboard():
         <script>
             let currentDatasetId = null;
 
+            async function apiFetch(path, options={}) {
+                // Try relative path first, then /api/v1 path fallback
+                let res = await fetch(path, options);
+                if (res.status === 404 && !path.startsWith('/api/v1')) {
+                    res = await fetch('/api/v1' + path, options);
+                }
+                return res;
+            }
+
             async function loadSampleData() {
                 document.getElementById('btn-sample').innerText = '⏳ Loading...';
                 try {
-                    const uploadRes = await fetch('/api/v1/datasets/upload_sample', { method: 'POST' });
+                    let uploadRes = await apiFetch('/datasets/upload_sample', { method: 'POST' });
+                    if (!uploadRes.ok) {
+                        uploadRes = await apiFetch('/api/v1/datasets/upload_sample', { method: 'POST' });
+                    }
                     const ds = await uploadRes.json();
                     currentDatasetId = ds.id;
                     
@@ -180,7 +206,7 @@ def get_html_dashboard():
             }
 
             async function loadEDA() {
-                const res = await fetch(`/api/v1/eda/${currentDatasetId}`);
+                const res = await apiFetch(`/eda/${currentDatasetId}`);
                 const data = await res.json();
 
                 document.getElementById('kpi-revenue').innerText = '$' + data.total_revenue.toLocaleString();
@@ -207,7 +233,7 @@ def get_html_dashboard():
                 const model = document.getElementById('select-model').value;
                 const horizon = parseInt(document.getElementById('select-horizon').value);
 
-                const fcRes = await fetch('/api/v1/forecast/run', {
+                const fcRes = await apiFetch('/forecast/run', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ dataset_id: currentDatasetId, model_name: model, horizon_months: horizon })
@@ -224,7 +250,7 @@ def get_html_dashboard():
                     line: { color: '#0D9488', width: 3, dash: 'dash' }
                 }], { margin: { t: 10, b: 30, l: 40, r: 10 } });
 
-                const recRes = await fetch(`/api/v1/forecast/decision_intelligence/${currentDatasetId}`);
+                const recRes = await apiFetch(`/forecast/decision_intelligence/${currentDatasetId}`);
                 const recData = await recRes.json();
                 
                 const recContainer = document.getElementById('recommendations-list');
@@ -248,9 +274,9 @@ def get_html_dashboard():
             async function downloadReport() {
                 const model = document.getElementById('select-model').value;
                 const horizon = document.getElementById('select-horizon').value;
-                const res = await fetch(`/api/v1/reports/generate?dataset_id=${currentDatasetId}&model_name=${model}&horizon_months=${horizon}`, { method: 'POST' });
+                const res = await apiFetch(`/reports/generate?dataset_id=${currentDatasetId}&model_name=${model}&horizon_months=${horizon}`, { method: 'POST' });
                 const report = await res.json();
-                window.open(`/api/v1/reports/download/${report.id}`, '_blank');
+                window.open(`/reports/download/${report.id}`, '_blank');
             }
         </script>
     </body>
@@ -264,6 +290,6 @@ def serve_root():
 @app.exception_handler(404)
 async def custom_404_handler(request: Request, exc):
     path = request.url.path
-    if path.startswith("/api/") or path.startswith("/docs") or path.startswith("/openapi"):
+    if path.startswith("/datasets") or path.startswith("/eda") or path.startswith("/forecast") or path.startswith("/scenarios") or path.startswith("/reports") or path.startswith("/docs") or path.startswith("/openapi"):
         return JSONResponse(content={"detail": "Not Found"}, status_code=404)
     return HTMLResponse(content=get_html_dashboard())
