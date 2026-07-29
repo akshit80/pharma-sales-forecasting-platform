@@ -24,10 +24,8 @@ app.add_middleware(
 
 app.include_router(api_router)
 
-@app.get("/", response_class=HTMLResponse)
-def serve_dashboard():
-    """Serves the interactive web dashboard for Vercel deployment."""
-    html_content = """
+def get_html_dashboard():
+    return """
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -166,7 +164,6 @@ def serve_dashboard():
             async function loadSampleData() {
                 document.getElementById('btn-sample').innerText = '⏳ Loading...';
                 try {
-                    // Upload sample data via backend service endpoint
                     const uploadRes = await fetch('/api/v1/datasets/upload_sample', { method: 'POST' });
                     const ds = await uploadRes.json();
                     currentDatasetId = ds.id;
@@ -191,7 +188,6 @@ def serve_dashboard():
                 document.getElementById('kpi-products').innerText = data.products.length;
                 document.getElementById('kpi-regions').innerText = data.regions.length;
 
-                // Monthly Trend Plot
                 const months = data.monthly_sales.map(m => m.month_str);
                 const sales = data.monthly_sales.map(m => m.sales_units);
                 Plotly.newPlot('chart-trend', [{
@@ -199,7 +195,6 @@ def serve_dashboard():
                     line: { color: '#1E3A8A', width: 3 }
                 }], { margin: { t: 10, b: 30, l: 40, r: 10 } });
 
-                // Seasonality Plot
                 const seasonMonths = data.seasonality.map(s => s.month_name);
                 const seasonAvg = data.seasonality.map(s => s.sales_units);
                 Plotly.newPlot('chart-season', [{
@@ -211,10 +206,7 @@ def serve_dashboard():
             async function runForecastAndScenario() {
                 const model = document.getElementById('select-model').value;
                 const horizon = parseInt(document.getElementById('select-horizon').value);
-                const price = parseFloat(document.getElementById('range-price').value);
-                const mkt = parseFloat(document.getElementById('range-mkt').value);
 
-                // Run forecast
                 const fcRes = await fetch('/api/v1/forecast/run', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -224,7 +216,6 @@ def serve_dashboard():
 
                 document.getElementById('metrics-badge').innerText = `MAE: ${fc.mae} | RMSE: ${fc.rmse} | MAPE: ${fc.mape}%`;
 
-                // Plot forecast
                 const fcDates = fc.predictions.map(p => p.date);
                 const fcUnits = fc.predictions.map(p => p.predicted_units);
 
@@ -233,7 +224,6 @@ def serve_dashboard():
                     line: { color: '#0D9488', width: 3, dash: 'dash' }
                 }], { margin: { t: 10, b: 30, l: 40, r: 10 } });
 
-                // Fetch recommendations
                 const recRes = await fetch(`/api/v1/forecast/decision_intelligence/${currentDatasetId}`);
                 const recData = await recRes.json();
                 
@@ -266,4 +256,11 @@ def serve_dashboard():
     </body>
     </html>
     """
-    return html_content
+
+@app.get("/", response_class=HTMLResponse)
+def serve_dashboard():
+    return get_html_dashboard()
+
+@app.get("/api/index.py", response_class=HTMLResponse)
+def serve_dashboard_vercel_rewrite():
+    return get_html_dashboard()
