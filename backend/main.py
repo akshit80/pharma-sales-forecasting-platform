@@ -1,6 +1,6 @@
 import os
 from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from backend.database.database import Base, engine
 from backend.api.router import api_router
@@ -261,8 +261,9 @@ def get_html_dashboard():
 def serve_root():
     return HTMLResponse(content=get_html_dashboard())
 
-@app.get("/{full_path:path}", response_class=HTMLResponse)
-def serve_fallback(request: Request, full_path: str):
-    if full_path.startswith("api/") or full_path.startswith("docs") or full_path.startswith("openapi"):
-        return HTMLResponse(content='{"detail": "Not Found"}', status_code=404)
+@app.exception_handler(404)
+async def custom_404_handler(request: Request, exc):
+    path = request.url.path
+    if path.startswith("/api/") or path.startswith("/docs") or path.startswith("/openapi"):
+        return JSONResponse(content={"detail": "Not Found"}, status_code=404)
     return HTMLResponse(content=get_html_dashboard())
