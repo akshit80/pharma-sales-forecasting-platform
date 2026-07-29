@@ -22,9 +22,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Include API router for /api/v1, /api, and root level API routes
+# Register routers under /api/v1, /v1, and root prefix for Vercel serverless path compatibility
 app.include_router(api_router)
 app.include_router(api_router, prefix="/api")
+app.include_router(api_router, prefix="/v1")
 
 def get_html_dashboard():
     return """
@@ -163,12 +164,23 @@ def get_html_dashboard():
         <script>
             let currentDatasetId = null;
 
+            async function apiFetch(path, options={}) {
+                let res = await fetch(path, options);
+                if (!res.ok) {
+                    res = await fetch('/api/v1' + path, options);
+                }
+                if (!res.ok) {
+                    res = await fetch('/v1' + path, options);
+                }
+                return res;
+            }
+
             async function loadSampleData() {
                 document.getElementById('btn-sample').innerText = '⏳ Loading...';
                 try {
-                    let uploadRes = await fetch('/api/v1/datasets/upload_sample', { method: 'POST' });
+                    let uploadRes = await apiFetch('/datasets/upload_sample', { method: 'POST' });
                     if (!uploadRes.ok) {
-                        uploadRes = await fetch('/api/datasets/upload_sample', { method: 'POST' });
+                        uploadRes = await apiFetch('/api/v1/datasets/upload_sample', { method: 'POST' });
                     }
                     const ds = await uploadRes.json();
                     currentDatasetId = ds.id;
@@ -185,7 +197,7 @@ def get_html_dashboard():
             }
 
             async function loadEDA() {
-                const res = await fetch(`/api/v1/eda/${currentDatasetId}`);
+                const res = await apiFetch(`/eda/${currentDatasetId}`);
                 const data = await res.json();
 
                 document.getElementById('kpi-revenue').innerText = '$' + data.total_revenue.toLocaleString();
@@ -212,7 +224,7 @@ def get_html_dashboard():
                 const model = document.getElementById('select-model').value;
                 const horizon = parseInt(document.getElementById('select-horizon').value);
 
-                const fcRes = await fetch('/api/v1/forecast/run', {
+                const fcRes = await apiFetch('/forecast/run', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ dataset_id: currentDatasetId, model_name: model, horizon_months: horizon })
@@ -229,7 +241,7 @@ def get_html_dashboard():
                     line: { color: '#0D9488', width: 3, dash: 'dash' }
                 }], { margin: { t: 10, b: 30, l: 40, r: 10 } });
 
-                const recRes = await fetch(`/api/v1/forecast/decision_intelligence/${currentDatasetId}`);
+                const recRes = await apiFetch(`/forecast/decision_intelligence/${currentDatasetId}`);
                 const recData = await recRes.json();
                 
                 const recContainer = document.getElementById('recommendations-list');
@@ -253,9 +265,9 @@ def get_html_dashboard():
             async function downloadReport() {
                 const model = document.getElementById('select-model').value;
                 const horizon = document.getElementById('select-horizon').value;
-                const res = await fetch(`/api/v1/reports/generate?dataset_id=${currentDatasetId}&model_name=${model}&horizon_months=${horizon}`, { method: 'POST' });
+                const res = await apiFetch(`/reports/generate?dataset_id=${currentDatasetId}&model_name=${model}&horizon_months=${horizon}`, { method: 'POST' });
                 const report = await res.json();
-                window.open(`/api/v1/reports/download/${report.id}`, '_blank');
+                window.open(`/reports/download/${report.id}`, '_blank');
             }
         </script>
     </body>
