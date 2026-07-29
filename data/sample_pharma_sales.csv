@@ -1,0 +1,721 @@
+date,product_name,therapeutic_area,region,sales_units,unit_price,marketing_spend,revenue
+2021-01-01,CardioVasc-X,Cardiology,North America,8520,122.78,23086.2,1046085.6
+2021-01-01,CardioVasc-X,Cardiology,Europe,6364,115.87,12830.8,737396.68
+2021-01-01,CardioVasc-X,Cardiology,Asia Pacific,5624,114.25,17763.87,642542.0
+2021-01-01,CardioVasc-X,Cardiology,Latin America,3102,116.2,7954.42,360452.4
+2021-01-01,OncoShield-A,Oncology,North America,1736,446.94,22016.24,775887.84
+2021-01-01,OncoShield-A,Oncology,Europe,1381,433.78,19194.27,599050.18
+2021-01-01,OncoShield-A,Oncology,Asia Pacific,1063,448.02,11048.33,476245.26
+2021-01-01,OncoShield-A,Oncology,Latin America,813,450.64,7866.95,366370.32
+2021-01-01,NeuroCalm,Neurology,North America,13413,85.91,18713.59,1152310.83
+2021-01-01,NeuroCalm,Neurology,Europe,10841,81.58,14519.16,884408.78
+2021-01-01,NeuroCalm,Neurology,Asia Pacific,9248,81.79,11875.39,756393.92
+2021-01-01,NeuroCalm,Neurology,Latin America,5183,88.48,8039.43,458591.84
+2021-01-01,ImmunoFlex,Immunology,North America,5502,225.67,24454.69,1241636.34
+2021-01-01,ImmunoFlex,Immunology,Europe,5300,222.75,25668.43,1180575.0
+2021-01-01,ImmunoFlex,Immunology,Asia Pacific,3687,220.54,15493.86,813130.98
+2021-01-01,ImmunoFlex,Immunology,Latin America,1965,224.74,7183.65,441614.1
+2021-01-01,DiabeCare,Endocrinology,North America,19886,63.58,19065.32,1264351.88
+2021-01-01,DiabeCare,Endocrinology,Europe,13791,66.96,12769.18,923445.36
+2021-01-01,DiabeCare,Endocrinology,Asia Pacific,11596,61.79,11672.31,716516.84
+2021-01-01,DiabeCare,Endocrinology,Latin America,7778,66.49,10047.82,517159.22
+2021-01-01,CardioVasc-X,Cardiology,North America,8083,124.36,17596.64,1005201.88
+2021-01-01,CardioVasc-X,Cardiology,Europe,6724,114.76,11603.12,771646.24
+2021-01-01,CardioVasc-X,Cardiology,Asia Pacific,4531,122.76,10585.9,556225.56
+2021-01-01,CardioVasc-X,Cardiology,Latin America,3419,119.67,10575.57,409151.73
+2021-01-01,OncoShield-A,Oncology,North America,1968,461.74,22675.25,908704.32
+2021-01-01,OncoShield-A,Oncology,Europe,1659,449.72,21583.79,746085.48
+2021-01-01,OncoShield-A,Oncology,Asia Pacific,1234,428.64,6471.32,528941.76
+2021-01-01,OncoShield-A,Oncology,Latin America,836,450.39,6491.01,376526.04
+2021-01-01,NeuroCalm,Neurology,North America,13945,84.24,20216.8,1174726.8
+2021-01-01,NeuroCalm,Neurology,Europe,10701,81.4,13991.94,871061.4
+2021-01-01,NeuroCalm,Neurology,Asia Pacific,7752,88.65,11395.66,687214.8
+2021-01-01,NeuroCalm,Neurology,Latin America,5807,88.16,9971.38,511945.12
+2021-01-01,ImmunoFlex,Immunology,North America,6107,239.03,18905.39,1459756.21
+2021-01-01,ImmunoFlex,Immunology,Europe,4763,239.11,21173.17,1138880.93
+2021-01-01,ImmunoFlex,Immunology,Asia Pacific,3449,223.74,11685.04,771679.26
+2021-01-01,ImmunoFlex,Immunology,Latin America,2300,238.3,11371.14,548090.0
+2021-01-01,DiabeCare,Endocrinology,North America,18436,64.46,21167.46,1188384.56
+2021-01-01,DiabeCare,Endocrinology,Europe,13723,63.94,15300.32,877448.62
+2021-01-01,DiabeCare,Endocrinology,Asia Pacific,11644,65.12,13155.25,758257.28
+2021-01-01,DiabeCare,Endocrinology,Latin America,7935,68.07,7353.21,540135.45
+2021-03-01,CardioVasc-X,Cardiology,North America,9052,117.42,13120.9,1062885.84
+2021-03-01,CardioVasc-X,Cardiology,Europe,7121,120.03,17071.6,854733.63
+2021-03-01,CardioVasc-X,Cardiology,Asia Pacific,5974,115.74,13160.91,691430.76
+2021-03-01,CardioVasc-X,Cardiology,Latin America,3769,116.9,9745.17,440596.1
+2021-03-01,OncoShield-A,Oncology,North America,2574,438.19,26158.19,1127901.06
+2021-03-01,OncoShield-A,Oncology,Europe,1915,455.95,14046.38,873144.25
+2021-03-01,OncoShield-A,Oncology,Asia Pacific,1676,431.56,15294.02,723294.56
+2021-03-01,OncoShield-A,Oncology,Latin America,958,435.89,8224.49,417582.62
+2021-03-01,NeuroCalm,Neurology,North America,14987,86.51,21716.02,1296525.37
+2021-03-01,NeuroCalm,Neurology,Europe,11426,82.68,16759.76,944701.68
+2021-03-01,NeuroCalm,Neurology,Asia Pacific,9483,86.62,10779.44,821417.46
+2021-03-01,NeuroCalm,Neurology,Latin America,5984,81.92,10257.5,490209.28
+2021-03-01,ImmunoFlex,Immunology,North America,6450,239.77,17956.31,1546516.5
+2021-03-01,ImmunoFlex,Immunology,Europe,5322,233.68,15535.56,1243644.96
+2021-03-01,ImmunoFlex,Immunology,Asia Pacific,4556,230.68,14310.17,1050978.08
+2021-03-01,ImmunoFlex,Immunology,Latin America,2568,239.14,8532.8,614111.52
+2021-03-01,DiabeCare,Endocrinology,North America,22944,63.95,22398.33,1467268.8
+2021-03-01,DiabeCare,Endocrinology,Europe,15619,67.58,21076.73,1055532.02
+2021-03-01,DiabeCare,Endocrinology,Asia Pacific,13331,65.92,14373.22,878779.52
+2021-03-01,DiabeCare,Endocrinology,Latin America,8843,61.81,9537.98,546585.83
+2021-04-01,CardioVasc-X,Cardiology,North America,9506,114.06,22694.05,1084254.36
+2021-04-01,CardioVasc-X,Cardiology,Europe,6844,122.3,17432.72,837021.2
+2021-04-01,CardioVasc-X,Cardiology,Asia Pacific,6143,122.55,10497.72,752824.65
+2021-04-01,CardioVasc-X,Cardiology,Latin America,3453,122.96,7807.21,424580.88
+2021-04-01,OncoShield-A,Oncology,North America,2558,457.09,25567.98,1169236.22
+2021-04-01,OncoShield-A,Oncology,Europe,1785,444.05,13920.88,792629.25
+2021-04-01,OncoShield-A,Oncology,Asia Pacific,1319,471.29,11329.53,621631.51
+2021-04-01,OncoShield-A,Oncology,Latin America,918,455.9,10802.06,418516.2
+2021-04-01,NeuroCalm,Neurology,North America,17831,85.65,21493.25,1527225.15
+2021-04-01,NeuroCalm,Neurology,Europe,11549,86.89,12105.92,1003492.61
+2021-04-01,NeuroCalm,Neurology,Asia Pacific,9729,88.74,10829.6,863351.46
+2021-04-01,NeuroCalm,Neurology,Latin America,6503,88.97,8959.41,578571.91
+2021-04-01,ImmunoFlex,Immunology,North America,5955,238.08,17806.87,1417766.4
+2021-04-01,ImmunoFlex,Immunology,Europe,4929,231.31,13724.13,1140126.99
+2021-04-01,ImmunoFlex,Immunology,Asia Pacific,4355,231.61,14258.58,1008661.55
+2021-04-01,ImmunoFlex,Immunology,Latin America,2527,241.27,9611.88,609689.29
+2021-04-01,DiabeCare,Endocrinology,North America,19988,67.45,21687.07,1348190.6
+2021-04-01,DiabeCare,Endocrinology,Europe,18466,66.32,19782.81,1224665.12
+2021-04-01,DiabeCare,Endocrinology,Asia Pacific,11823,67.01,9984.05,792259.23
+2021-04-01,DiabeCare,Endocrinology,Latin America,8678,67.69,9746.93,587413.82
+2021-05-01,CardioVasc-X,Cardiology,North America,13166,123.58,23806.62,1627054.28
+2021-05-01,CardioVasc-X,Cardiology,Europe,8371,123.55,21472.24,1034237.05
+2021-05-01,CardioVasc-X,Cardiology,Asia Pacific,6263,118.51,13000.13,742228.13
+2021-05-01,CardioVasc-X,Cardiology,Latin America,3555,114.43,9555.29,406798.65
+2021-05-01,OncoShield-A,Oncology,North America,2183,440.39,31574.94,961371.37
+2021-05-01,OncoShield-A,Oncology,Europe,1782,429.18,15552.38,764798.76
+2021-05-01,OncoShield-A,Oncology,Asia Pacific,1534,433.22,12565.39,664559.48
+2021-05-01,OncoShield-A,Oncology,Latin America,947,437.21,12136.7,414037.87
+2021-05-01,NeuroCalm,Neurology,North America,15670,81.19,18430.58,1272247.3
+2021-05-01,NeuroCalm,Neurology,Europe,14665,86.17,25061.15,1263683.05
+2021-05-01,NeuroCalm,Neurology,Asia Pacific,9186,87.51,8255.23,803866.86
+2021-05-01,NeuroCalm,Neurology,Latin America,5236,81.42,8427.68,426315.12
+2021-05-01,ImmunoFlex,Immunology,North America,7530,227.91,23763.2,1716162.3
+2021-05-01,ImmunoFlex,Immunology,Europe,5046,224.26,15824.68,1131615.96
+2021-05-01,ImmunoFlex,Immunology,Asia Pacific,4485,233.68,18774.14,1048054.8
+2021-05-01,ImmunoFlex,Immunology,Latin America,3035,232.57,9948.0,705849.95
+2021-05-01,DiabeCare,Endocrinology,North America,19773,64.06,15024.72,1266658.38
+2021-05-01,DiabeCare,Endocrinology,Europe,18765,62.39,16153.18,1170748.35
+2021-05-01,DiabeCare,Endocrinology,Asia Pacific,11069,62.88,4880.48,696018.72
+2021-05-01,DiabeCare,Endocrinology,Latin America,7249,65.75,5559.32,476621.75
+2021-05-01,CardioVasc-X,Cardiology,North America,9908,118.5,19816.81,1174098.0
+2021-05-01,CardioVasc-X,Cardiology,Europe,8957,124.28,17272.7,1113175.96
+2021-05-01,CardioVasc-X,Cardiology,Asia Pacific,6068,114.85,11226.66,696909.8
+2021-05-01,CardioVasc-X,Cardiology,Latin America,3839,121.03,8935.42,464634.17
+2021-05-01,OncoShield-A,Oncology,North America,2527,444.97,22222.49,1124439.19
+2021-05-01,OncoShield-A,Oncology,Europe,2074,452.05,14972.49,937551.7
+2021-05-01,OncoShield-A,Oncology,Asia Pacific,1501,470.75,13544.7,706595.75
+2021-05-01,OncoShield-A,Oncology,Latin America,927,441.85,8406.52,409594.95
+2021-05-01,NeuroCalm,Neurology,North America,16664,81.75,19167.89,1362282.0
+2021-05-01,NeuroCalm,Neurology,Europe,13817,88.21,20323.64,1218797.57
+2021-05-01,NeuroCalm,Neurology,Asia Pacific,10277,83.15,16239.68,854532.55
+2021-05-01,NeuroCalm,Neurology,Latin America,5840,87.61,10340.11,511642.4
+2021-05-01,ImmunoFlex,Immunology,North America,7033,227.06,21638.33,1596912.98
+2021-05-01,ImmunoFlex,Immunology,Europe,5647,239.91,14787.87,1354771.77
+2021-05-01,ImmunoFlex,Immunology,Asia Pacific,4541,235.77,13360.6,1070631.57
+2021-05-01,ImmunoFlex,Immunology,Latin America,2720,239.26,8552.76,650787.2
+2021-05-01,DiabeCare,Endocrinology,North America,22976,63.83,27402.56,1466558.08
+2021-05-01,DiabeCare,Endocrinology,Europe,17569,61.82,16256.06,1086115.58
+2021-05-01,DiabeCare,Endocrinology,Asia Pacific,13157,67.93,14874.39,893755.01
+2021-05-01,DiabeCare,Endocrinology,Latin America,9451,64.66,12874.19,611101.66
+2021-06-01,CardioVasc-X,Cardiology,North America,8313,122.07,17473.67,1014767.91
+2021-06-01,CardioVasc-X,Cardiology,Europe,7774,123.48,19836.71,959933.52
+2021-06-01,CardioVasc-X,Cardiology,Asia Pacific,5333,114.69,14028.06,611641.77
+2021-06-01,CardioVasc-X,Cardiology,Latin America,4044,124.65,5456.22,504084.6
+2021-06-01,OncoShield-A,Oncology,North America,2167,433.93,18263.45,940326.31
+2021-06-01,OncoShield-A,Oncology,Europe,1954,432.05,19297.58,844225.7
+2021-06-01,OncoShield-A,Oncology,Asia Pacific,1331,430.77,14751.47,573354.87
+2021-06-01,OncoShield-A,Oncology,Latin America,952,431.16,10423.33,410464.32
+2021-06-01,NeuroCalm,Neurology,North America,12858,87.66,15539.63,1127132.28
+2021-06-01,NeuroCalm,Neurology,Europe,12554,81.46,14904.22,1022648.84
+2021-06-01,NeuroCalm,Neurology,Asia Pacific,10360,84.36,14936.93,873969.6
+2021-06-01,NeuroCalm,Neurology,Latin America,5846,84.73,8808.14,495331.58
+2021-06-01,ImmunoFlex,Immunology,North America,6317,235.66,23286.89,1488664.22
+2021-06-01,ImmunoFlex,Immunology,Europe,5161,227.12,18881.11,1172166.32
+2021-06-01,ImmunoFlex,Immunology,Asia Pacific,3960,223.64,16003.53,885614.4
+2021-06-01,ImmunoFlex,Immunology,Latin America,2777,241.34,9505.6,670201.18
+2021-06-01,DiabeCare,Endocrinology,North America,19786,68.05,22302.33,1346437.3
+2021-06-01,DiabeCare,Endocrinology,Europe,17488,66.27,25010.43,1158929.76
+2021-06-01,DiabeCare,Endocrinology,Asia Pacific,12498,65.55,20118.33,819243.9
+2021-06-01,DiabeCare,Endocrinology,Latin America,8698,65.78,9167.0,572154.44
+2021-07-01,CardioVasc-X,Cardiology,North America,8268,119.56,18322.56,988522.08
+2021-07-01,CardioVasc-X,Cardiology,Europe,5961,114.93,20875.31,685097.73
+2021-07-01,CardioVasc-X,Cardiology,Asia Pacific,6247,117.71,15123.85,735334.37
+2021-07-01,CardioVasc-X,Cardiology,Latin America,3746,115.95,10515.92,434348.7
+2021-07-01,OncoShield-A,Oncology,North America,2347,469.47,16206.31,1101846.09
+2021-07-01,OncoShield-A,Oncology,Europe,1583,463.97,17047.36,734464.51
+2021-07-01,OncoShield-A,Oncology,Asia Pacific,1371,471.15,9305.94,645946.65
+2021-07-01,OncoShield-A,Oncology,Latin America,848,448.59,9957.76,380404.32
+2021-07-01,NeuroCalm,Neurology,North America,12858,81.23,14998.71,1044455.34
+2021-07-01,NeuroCalm,Neurology,Europe,11171,89.25,18199.68,997011.75
+2021-07-01,NeuroCalm,Neurology,Asia Pacific,8652,87.29,14171.1,755233.08
+2021-07-01,NeuroCalm,Neurology,Latin America,4777,81.85,8846.67,390997.45
+2021-07-01,ImmunoFlex,Immunology,North America,6556,223.76,22550.64,1466970.56
+2021-07-01,ImmunoFlex,Immunology,Europe,5486,226.74,20971.67,1243895.64
+2021-07-01,ImmunoFlex,Immunology,Asia Pacific,3574,230.47,15097.11,823699.78
+2021-07-01,ImmunoFlex,Immunology,Latin America,2714,238.1,9654.3,646203.4
+2021-07-01,DiabeCare,Endocrinology,North America,24143,67.45,31096.71,1628445.35
+2021-07-01,DiabeCare,Endocrinology,Europe,14124,61.94,13771.13,874840.56
+2021-07-01,DiabeCare,Endocrinology,Asia Pacific,13358,66.33,15983.47,886036.14
+2021-07-01,DiabeCare,Endocrinology,Latin America,7311,61.84,8618.99,452112.24
+2021-08-01,CardioVasc-X,Cardiology,North America,7450,118.71,26859.02,884389.5
+2021-08-01,CardioVasc-X,Cardiology,Europe,6400,118.18,20503.12,756352.0
+2021-08-01,CardioVasc-X,Cardiology,Asia Pacific,5238,118.76,18531.72,622064.88
+2021-08-01,CardioVasc-X,Cardiology,Latin America,3348,125.39,11364.94,419805.72
+2021-08-01,OncoShield-A,Oncology,North America,1871,448.16,14615.0,838507.36
+2021-08-01,OncoShield-A,Oncology,Europe,1561,442.29,17395.07,690414.69
+2021-08-01,OncoShield-A,Oncology,Asia Pacific,1228,430.91,10532.26,529157.48
+2021-08-01,OncoShield-A,Oncology,Latin America,784,443.06,7407.62,347359.04
+2021-08-01,NeuroCalm,Neurology,North America,14347,86.42,21888.79,1239867.74
+2021-08-01,NeuroCalm,Neurology,Europe,9576,81.1,15860.72,776613.6
+2021-08-01,NeuroCalm,Neurology,Asia Pacific,7422,82.25,12738.77,610459.5
+2021-08-01,NeuroCalm,Neurology,Latin America,4927,83.85,6775.23,413128.95
+2021-08-01,ImmunoFlex,Immunology,North America,6279,219.4,30876.95,1377612.6
+2021-08-01,ImmunoFlex,Immunology,Europe,4913,220.38,19209.15,1082726.94
+2021-08-01,ImmunoFlex,Immunology,Asia Pacific,3442,237.04,13929.87,815891.68
+2021-08-01,ImmunoFlex,Immunology,Latin America,2319,223.32,8100.82,517879.08
+2021-08-01,DiabeCare,Endocrinology,North America,14837,65.77,20947.27,975829.49
+2021-08-01,DiabeCare,Endocrinology,Europe,11226,66.61,15234.27,747763.86
+2021-08-01,DiabeCare,Endocrinology,Asia Pacific,11481,65.08,15893.19,747183.48
+2021-08-01,DiabeCare,Endocrinology,Latin America,6981,64.66,7652.69,451391.46
+2021-09-01,CardioVasc-X,Cardiology,North America,7572,117.23,15143.73,887665.56
+2021-09-01,CardioVasc-X,Cardiology,Europe,5919,117.86,16875.91,697613.34
+2021-09-01,CardioVasc-X,Cardiology,Asia Pacific,4274,115.44,12488.89,493390.56
+2021-09-01,CardioVasc-X,Cardiology,Latin America,3272,122.15,9979.85,399674.8
+2021-09-01,OncoShield-A,Oncology,North America,2123,431.41,22276.92,915883.43
+2021-09-01,OncoShield-A,Oncology,Europe,1660,461.04,25856.24,765326.4
+2021-09-01,OncoShield-A,Oncology,Asia Pacific,1095,440.27,11368.15,482095.65
+2021-09-01,OncoShield-A,Oncology,Latin America,668,453.19,12231.84,302730.92
+2021-09-01,NeuroCalm,Neurology,North America,12559,81.62,16071.39,1025065.58
+2021-09-01,NeuroCalm,Neurology,Europe,8958,82.12,15925.0,735630.96
+2021-09-01,NeuroCalm,Neurology,Asia Pacific,6979,82.22,12644.32,573813.38
+2021-09-01,NeuroCalm,Neurology,Latin America,4904,89.1,4775.97,436946.4
+2021-09-01,ImmunoFlex,Immunology,North America,5093,240.8,21246.19,1226394.4
+2021-09-01,ImmunoFlex,Immunology,Europe,4305,224.43,18363.37,966171.15
+2021-09-01,ImmunoFlex,Immunology,Asia Pacific,3107,239.88,15780.76,745307.16
+2021-09-01,ImmunoFlex,Immunology,Latin America,2488,224.94,13470.35,559650.72
+2021-09-01,DiabeCare,Endocrinology,North America,17768,63.85,19355.54,1134486.8
+2021-09-01,DiabeCare,Endocrinology,Europe,10350,63.33,18512.15,655465.5
+2021-09-01,DiabeCare,Endocrinology,Asia Pacific,9771,63.63,15088.83,621728.73
+2021-09-01,DiabeCare,Endocrinology,Latin America,6692,64.88,7383.89,434176.96
+2021-10-01,CardioVasc-X,Cardiology,North America,8533,118.04,19530.5,1007235.32
+2021-10-01,CardioVasc-X,Cardiology,Europe,6847,122.18,15521.39,836566.46
+2021-10-01,CardioVasc-X,Cardiology,Asia Pacific,5913,119.66,15967.31,707549.58
+2021-10-01,CardioVasc-X,Cardiology,Latin America,2969,125.15,6217.28,371570.35
+2021-10-01,OncoShield-A,Oncology,North America,2016,469.73,24125.4,946975.68
+2021-10-01,OncoShield-A,Oncology,Europe,1803,465.38,19368.22,839080.14
+2021-10-01,OncoShield-A,Oncology,Asia Pacific,1224,436.57,15412.33,534361.68
+2021-10-01,OncoShield-A,Oncology,Latin America,777,464.16,9011.93,360652.32
+2021-10-01,NeuroCalm,Neurology,North America,16420,83.8,23759.91,1375996.0
+2021-10-01,NeuroCalm,Neurology,Europe,11223,87.69,16692.24,984144.87
+2021-10-01,NeuroCalm,Neurology,Asia Pacific,7300,84.68,8552.42,618164.0
+2021-10-01,NeuroCalm,Neurology,Latin America,5077,85.02,11649.32,431646.54
+2021-10-01,ImmunoFlex,Immunology,North America,6061,227.33,23926.78,1377847.13
+2021-10-01,ImmunoFlex,Immunology,Europe,4761,232.86,20795.3,1108646.46
+2021-10-01,ImmunoFlex,Immunology,Asia Pacific,3848,221.7,10168.08,853101.6
+2021-10-01,ImmunoFlex,Immunology,Latin America,2595,230.77,10605.55,598848.15
+2021-10-01,DiabeCare,Endocrinology,North America,19670,62.74,23275.22,1234095.8
+2021-10-01,DiabeCare,Endocrinology,Europe,13074,66.59,13794.13,870597.66
+2021-10-01,DiabeCare,Endocrinology,Asia Pacific,11090,66.71,14644.15,739813.9
+2021-10-01,DiabeCare,Endocrinology,Latin America,7790,67.09,8956.01,522631.1
+2021-11-01,CardioVasc-X,Cardiology,North America,8177,123.57,21384.11,1010431.89
+2021-11-01,CardioVasc-X,Cardiology,Europe,6380,122.67,16242.23,782634.6
+2021-11-01,CardioVasc-X,Cardiology,Asia Pacific,6096,122.33,17058.54,745723.68
+2021-11-01,CardioVasc-X,Cardiology,Latin America,3412,118.15,6525.08,403127.8
+2021-11-01,OncoShield-A,Oncology,North America,2250,448.29,14562.87,1008652.5
+2021-11-01,OncoShield-A,Oncology,Europe,1977,455.02,18401.68,899574.54
+2021-11-01,OncoShield-A,Oncology,Asia Pacific,1370,458.85,14849.18,628624.5
+2021-11-01,OncoShield-A,Oncology,Latin America,857,434.36,10107.67,372246.52
+2021-11-01,NeuroCalm,Neurology,North America,16984,84.36,31112.49,1432770.24
+2021-11-01,NeuroCalm,Neurology,Europe,10968,88.62,18413.59,971984.16
+2021-11-01,NeuroCalm,Neurology,Asia Pacific,8310,89.12,11655.21,740587.2
+2021-11-01,NeuroCalm,Neurology,Latin America,5985,84.14,14606.21,503577.9
+2021-11-01,ImmunoFlex,Immunology,North America,6023,236.97,21889.84,1427270.31
+2021-11-01,ImmunoFlex,Immunology,Europe,3954,239.66,20787.67,947615.64
+2021-11-01,ImmunoFlex,Immunology,Asia Pacific,3266,235.46,10782.3,769012.36
+2021-11-01,ImmunoFlex,Immunology,Latin America,2292,228.91,6775.89,524661.72
+2021-11-01,DiabeCare,Endocrinology,North America,19110,64.99,21493.2,1241958.9
+2021-11-01,DiabeCare,Endocrinology,Europe,15048,64.11,20617.85,964727.28
+2021-11-01,DiabeCare,Endocrinology,Asia Pacific,13512,61.84,19904.78,835582.08
+2021-11-01,DiabeCare,Endocrinology,Latin America,7730,68.0,7716.69,525640.0
+2021-12-01,CardioVasc-X,Cardiology,North America,8609,115.02,21526.56,990207.18
+2021-12-01,CardioVasc-X,Cardiology,Europe,7290,121.14,17877.5,883110.6
+2021-12-01,CardioVasc-X,Cardiology,Asia Pacific,5718,116.52,14665.74,666261.36
+2021-12-01,CardioVasc-X,Cardiology,Latin America,3693,116.29,9526.05,429458.97
+2021-12-01,OncoShield-A,Oncology,North America,2187,452.92,22600.97,990536.04
+2021-12-01,OncoShield-A,Oncology,Europe,1417,447.33,22839.18,633866.61
+2021-12-01,OncoShield-A,Oncology,Asia Pacific,1183,434.49,18269.8,514001.67
+2021-12-01,OncoShield-A,Oncology,Latin America,863,470.08,10315.19,405679.04
+2021-12-01,NeuroCalm,Neurology,North America,13569,86.22,16345.82,1169919.18
+2021-12-01,NeuroCalm,Neurology,Europe,11328,82.08,16581.24,929802.24
+2021-12-01,NeuroCalm,Neurology,Asia Pacific,10337,80.98,17361.86,837090.26
+2021-12-01,NeuroCalm,Neurology,Latin America,5439,86.46,8376.28,470255.94
+2021-12-01,ImmunoFlex,Immunology,North America,6805,233.51,20363.43,1589035.55
+2021-12-01,ImmunoFlex,Immunology,Europe,4894,224.09,16621.31,1096696.46
+2021-12-01,ImmunoFlex,Immunology,Asia Pacific,4227,237.6,16704.56,1004335.2
+2021-12-01,ImmunoFlex,Immunology,Latin America,2421,223.21,12960.47,540391.41
+2021-12-01,DiabeCare,Endocrinology,North America,20920,61.83,25448.61,1293483.6
+2021-12-01,DiabeCare,Endocrinology,Europe,17158,67.55,11905.54,1159022.9
+2021-12-01,DiabeCare,Endocrinology,Asia Pacific,13476,63.44,13096.04,854917.44
+2021-12-01,DiabeCare,Endocrinology,Latin America,7076,63.49,12315.74,449255.24
+2022-01-01,CardioVasc-X,Cardiology,North America,10185,120.62,17032.53,1228514.7
+2022-01-01,CardioVasc-X,Cardiology,Europe,6405,125.38,11680.75,803058.9
+2022-01-01,CardioVasc-X,Cardiology,Asia Pacific,5726,124.42,13114.64,712428.92
+2022-01-01,CardioVasc-X,Cardiology,Latin America,3645,123.6,11719.7,450522.0
+2022-01-01,OncoShield-A,Oncology,North America,2210,439.59,21230.79,971493.9
+2022-01-01,OncoShield-A,Oncology,Europe,1906,439.1,25743.96,836924.6
+2022-01-01,OncoShield-A,Oncology,Asia Pacific,1336,471.8,15221.74,630324.8
+2022-01-01,OncoShield-A,Oncology,Latin America,848,439.75,7283.92,372908.0
+2022-01-01,NeuroCalm,Neurology,North America,13933,83.08,23792.64,1157553.64
+2022-01-01,NeuroCalm,Neurology,Europe,12702,87.8,25205.47,1115235.6
+2022-01-01,NeuroCalm,Neurology,Asia Pacific,9777,85.85,15472.44,839355.45
+2022-01-01,NeuroCalm,Neurology,Latin America,5874,88.52,7842.63,519966.48
+2022-01-01,ImmunoFlex,Immunology,North America,5489,230.44,14466.16,1264885.16
+2022-01-01,ImmunoFlex,Immunology,Europe,4977,232.37,16737.46,1156505.49
+2022-01-01,ImmunoFlex,Immunology,Asia Pacific,3441,225.14,12918.59,774706.74
+2022-01-01,ImmunoFlex,Immunology,Latin America,2392,225.33,12444.82,538989.36
+2022-01-01,DiabeCare,Endocrinology,North America,24096,66.06,18548.38,1591781.76
+2022-01-01,DiabeCare,Endocrinology,Europe,15834,63.15,18332.54,999917.1
+2022-01-01,DiabeCare,Endocrinology,Asia Pacific,12318,64.98,13024.22,800423.64
+2022-01-01,DiabeCare,Endocrinology,Latin America,8268,66.76,6496.74,551971.68
+2022-02-01,CardioVasc-X,Cardiology,North America,11583,122.26,22880.43,1416137.58
+2022-02-01,CardioVasc-X,Cardiology,Europe,7062,123.83,12463.08,874487.46
+2022-02-01,CardioVasc-X,Cardiology,Asia Pacific,6675,117.27,16686.01,782777.25
+2022-02-01,CardioVasc-X,Cardiology,Latin America,4109,115.1,6393.34,472945.9
+2022-02-01,OncoShield-A,Oncology,North America,2552,435.83,22698.65,1112238.16
+2022-02-01,OncoShield-A,Oncology,Europe,1917,460.45,21958.79,882682.65
+2022-02-01,OncoShield-A,Oncology,Asia Pacific,1611,458.65,16470.88,738885.15
+2022-02-01,OncoShield-A,Oncology,Latin America,972,449.52,8978.85,436933.44
+2022-02-01,NeuroCalm,Neurology,North America,16790,82.28,25021.49,1381481.2
+2022-02-01,NeuroCalm,Neurology,Europe,12701,81.04,21067.76,1029289.04
+2022-02-01,NeuroCalm,Neurology,Asia Pacific,10277,88.61,11609.87,910644.97
+2022-02-01,NeuroCalm,Neurology,Latin America,6306,87.93,12104.91,554486.58
+2022-02-01,ImmunoFlex,Immunology,North America,7057,219.35,27365.59,1547952.95
+2022-02-01,ImmunoFlex,Immunology,Europe,5337,221.27,13016.32,1180917.99
+2022-02-01,ImmunoFlex,Immunology,Asia Pacific,4125,226.32,15470.57,933570.0
+2022-02-01,ImmunoFlex,Immunology,Latin America,2738,225.75,9359.47,618103.5
+2022-02-01,DiabeCare,Endocrinology,North America,23931,63.82,29709.82,1527276.42
+2022-02-01,DiabeCare,Endocrinology,Europe,17696,65.75,21246.2,1163512.0
+2022-02-01,DiabeCare,Endocrinology,Asia Pacific,14580,67.85,15056.27,989253.0
+2022-02-01,DiabeCare,Endocrinology,Latin America,8263,64.36,12290.76,531806.68
+2022-03-01,CardioVasc-X,Cardiology,North America,11349,124.48,33848.64,1412723.52
+2022-03-01,CardioVasc-X,Cardiology,Europe,6609,122.85,12090.62,811915.65
+2022-03-01,CardioVasc-X,Cardiology,Asia Pacific,6236,118.26,13653.57,737469.36
+2022-03-01,CardioVasc-X,Cardiology,Latin America,3700,116.8,7937.84,432160.0
+2022-03-01,OncoShield-A,Oncology,North America,2626,444.79,23026.65,1168018.54
+2022-03-01,OncoShield-A,Oncology,Europe,1985,470.25,14317.83,933446.25
+2022-03-01,OncoShield-A,Oncology,Asia Pacific,1560,470.01,17840.76,733215.6
+2022-03-01,OncoShield-A,Oncology,Latin America,974,435.02,14528.07,423709.48
+2022-03-01,NeuroCalm,Neurology,North America,18003,85.92,23959.42,1546817.76
+2022-03-01,NeuroCalm,Neurology,Europe,12424,82.25,12498.21,1021874.0
+2022-03-01,NeuroCalm,Neurology,Asia Pacific,9703,87.38,13048.51,847848.14
+2022-03-01,NeuroCalm,Neurology,Latin America,6436,88.99,8951.76,572739.64
+2022-03-01,ImmunoFlex,Immunology,North America,7571,234.51,29775.09,1775475.21
+2022-03-01,ImmunoFlex,Immunology,Europe,5565,223.66,19470.81,1244667.9
+2022-03-01,ImmunoFlex,Immunology,Asia Pacific,3989,232.14,15511.21,926006.46
+2022-03-01,ImmunoFlex,Immunology,Latin America,2873,238.68,8267.78,685727.64
+2022-03-01,DiabeCare,Endocrinology,North America,22404,67.53,20345.69,1512942.12
+2022-03-01,DiabeCare,Endocrinology,Europe,19718,65.33,20199.12,1288176.94
+2022-03-01,DiabeCare,Endocrinology,Asia Pacific,13224,64.17,14378.73,848584.08
+2022-03-01,DiabeCare,Endocrinology,Latin America,8497,64.97,11694.65,552050.09
+2022-04-01,CardioVasc-X,Cardiology,North America,11009,124.21,20917.81,1367427.89
+2022-04-01,CardioVasc-X,Cardiology,Europe,6902,121.11,5570.37,835901.22
+2022-04-01,CardioVasc-X,Cardiology,Asia Pacific,7073,122.14,13531.68,863896.22
+2022-04-01,CardioVasc-X,Cardiology,Latin America,4242,124.54,6721.21,528298.68
+2022-04-01,OncoShield-A,Oncology,North America,2946,465.78,26089.72,1372187.88
+2022-04-01,OncoShield-A,Oncology,Europe,2136,465.17,19820.6,993603.12
+2022-04-01,OncoShield-A,Oncology,Asia Pacific,1783,455.34,18200.02,811871.22
+2022-04-01,OncoShield-A,Oncology,Latin America,1038,467.14,8701.62,484891.32
+2022-04-01,NeuroCalm,Neurology,North America,17744,83.6,22553.45,1483398.4
+2022-04-01,NeuroCalm,Neurology,Europe,13537,87.7,15805.02,1187194.9
+2022-04-01,NeuroCalm,Neurology,Asia Pacific,11670,80.8,15086.23,942936.0
+2022-04-01,NeuroCalm,Neurology,Latin America,6031,89.09,11635.51,537301.79
+2022-04-01,ImmunoFlex,Immunology,North America,7761,233.08,16987.34,1808933.88
+2022-04-01,ImmunoFlex,Immunology,Europe,6195,220.96,23815.49,1368847.2
+2022-04-01,ImmunoFlex,Immunology,Asia Pacific,5246,240.65,15748.15,1262449.9
+2022-04-01,ImmunoFlex,Immunology,Latin America,2668,239.94,12417.96,640159.92
+2022-04-01,DiabeCare,Endocrinology,North America,24229,63.71,21249.98,1543629.59
+2022-04-01,DiabeCare,Endocrinology,Europe,18342,65.53,17002.49,1201951.26
+2022-04-01,DiabeCare,Endocrinology,Asia Pacific,13173,62.05,18585.14,817384.65
+2022-04-01,DiabeCare,Endocrinology,Latin America,8945,61.91,10734.2,553784.95
+2022-05-01,CardioVasc-X,Cardiology,North America,11508,122.2,30830.61,1406277.6
+2022-05-01,CardioVasc-X,Cardiology,Europe,7540,125.97,12171.96,949813.8
+2022-05-01,CardioVasc-X,Cardiology,Asia Pacific,5187,115.96,10722.56,601484.52
+2022-05-01,CardioVasc-X,Cardiology,Latin America,4554,116.65,11367.88,531224.1
+2022-05-01,OncoShield-A,Oncology,North America,2525,456.95,24624.01,1153798.75
+2022-05-01,OncoShield-A,Oncology,Europe,1781,469.96,17627.31,836998.76
+2022-05-01,OncoShield-A,Oncology,Asia Pacific,1505,445.39,20668.29,670311.95
+2022-05-01,OncoShield-A,Oncology,Latin America,1000,437.85,11869.5,437850.0
+2022-05-01,NeuroCalm,Neurology,North America,18561,88.1,17602.15,1635224.1
+2022-05-01,NeuroCalm,Neurology,Europe,13344,82.33,20313.01,1098611.52
+2022-05-01,NeuroCalm,Neurology,Asia Pacific,10948,87.3,16128.35,955760.4
+2022-05-01,NeuroCalm,Neurology,Latin America,7057,86.07,10988.11,607395.99
+2022-05-01,ImmunoFlex,Immunology,North America,8137,236.82,24402.0,1927004.34
+2022-05-01,ImmunoFlex,Immunology,Europe,5553,221.38,14645.0,1229323.14
+2022-05-01,ImmunoFlex,Immunology,Asia Pacific,5146,223.11,13051.89,1148124.06
+2022-05-01,ImmunoFlex,Immunology,Latin America,2877,231.89,8571.57,667147.53
+2022-05-01,DiabeCare,Endocrinology,North America,23496,63.77,27426.69,1498339.92
+2022-05-01,DiabeCare,Endocrinology,Europe,17913,62.22,17426.28,1114546.86
+2022-05-01,DiabeCare,Endocrinology,Asia Pacific,11465,65.65,13728.35,752677.25
+2022-05-01,DiabeCare,Endocrinology,Latin America,8530,67.34,12122.34,574410.2
+2022-06-01,CardioVasc-X,Cardiology,North America,10040,116.9,19056.04,1173676.0
+2022-06-01,CardioVasc-X,Cardiology,Europe,8464,122.43,27480.02,1036247.52
+2022-06-01,CardioVasc-X,Cardiology,Asia Pacific,6245,117.92,14516.32,736410.4
+2022-06-01,CardioVasc-X,Cardiology,Latin America,3942,118.21,8350.45,465983.82
+2022-06-01,OncoShield-A,Oncology,North America,2361,453.04,18892.35,1069627.44
+2022-06-01,OncoShield-A,Oncology,Europe,2048,436.51,22233.73,893972.48
+2022-06-01,OncoShield-A,Oncology,Asia Pacific,1675,428.92,19438.04,718441.0
+2022-06-01,OncoShield-A,Oncology,Latin America,1019,466.69,13794.26,475557.11
+2022-06-01,NeuroCalm,Neurology,North America,18197,83.64,27854.79,1521997.08
+2022-06-01,NeuroCalm,Neurology,Europe,13625,87.7,18987.71,1194912.5
+2022-06-01,NeuroCalm,Neurology,Asia Pacific,9995,85.22,21491.1,851773.9
+2022-06-01,NeuroCalm,Neurology,Latin America,6453,81.26,9376.72,524370.78
+2022-06-01,ImmunoFlex,Immunology,North America,6867,238.55,20547.05,1638122.85
+2022-06-01,ImmunoFlex,Immunology,Europe,5115,236.66,14732.77,1210515.9
+2022-06-01,ImmunoFlex,Immunology,Asia Pacific,5136,231.27,15113.52,1187802.72
+2022-06-01,ImmunoFlex,Immunology,Latin America,2914,241.42,8235.24,703497.88
+2022-06-01,DiabeCare,Endocrinology,North America,23279,63.05,23804.57,1467740.95
+2022-06-01,DiabeCare,Endocrinology,Europe,17365,61.95,16697.88,1075761.75
+2022-06-01,DiabeCare,Endocrinology,Asia Pacific,11869,67.39,14405.72,799851.91
+2022-06-01,DiabeCare,Endocrinology,Latin America,9565,64.52,12014.08,617133.8
+2022-07-01,CardioVasc-X,Cardiology,North America,8250,125.85,17943.34,1038262.5
+2022-07-01,CardioVasc-X,Cardiology,Europe,8150,122.7,12843.08,1000005.0
+2022-07-01,CardioVasc-X,Cardiology,Asia Pacific,6021,124.81,18577.97,751481.01
+2022-07-01,CardioVasc-X,Cardiology,Latin America,3462,121.11,6860.36,419282.82
+2022-07-01,OncoShield-A,Oncology,North America,2761,460.49,30790.55,1271412.89
+2022-07-01,OncoShield-A,Oncology,Europe,1697,468.41,20177.32,794891.77
+2022-07-01,OncoShield-A,Oncology,Asia Pacific,1314,471.21,13599.38,619169.94
+2022-07-01,OncoShield-A,Oncology,Latin America,882,449.65,10847.24,396591.3
+2022-07-01,NeuroCalm,Neurology,North America,15544,84.54,26355.2,1314089.76
+2022-07-01,NeuroCalm,Neurology,Europe,11196,85.79,10330.57,960504.84
+2022-07-01,NeuroCalm,Neurology,Asia Pacific,8471,88.99,14173.54,753834.29
+2022-07-01,NeuroCalm,Neurology,Latin America,5470,83.51,11832.36,456799.7
+2022-07-01,ImmunoFlex,Immunology,North America,6928,240.81,21547.3,1668331.68
+2022-07-01,ImmunoFlex,Immunology,Europe,4811,220.19,12865.15,1059334.09
+2022-07-01,ImmunoFlex,Immunology,Asia Pacific,3696,226.25,15516.04,836220.0
+2022-07-01,ImmunoFlex,Immunology,Latin America,2863,224.22,9659.28,641941.86
+2022-07-01,DiabeCare,Endocrinology,North America,24371,62.84,30905.7,1531473.64
+2022-07-01,DiabeCare,Endocrinology,Europe,18320,64.84,21841.28,1187868.8
+2022-07-01,DiabeCare,Endocrinology,Asia Pacific,13498,65.55,16448.54,884793.9
+2022-07-01,DiabeCare,Endocrinology,Latin America,8434,62.48,9569.51,526956.32
+2022-08-01,CardioVasc-X,Cardiology,North America,9085,120.37,23574.17,1093561.45
+2022-08-01,CardioVasc-X,Cardiology,Europe,6286,125.21,18299.64,787070.06
+2022-08-01,CardioVasc-X,Cardiology,Asia Pacific,4604,114.5,15616.8,527158.0
+2022-08-01,CardioVasc-X,Cardiology,Latin America,3619,124.42,10535.65,450275.98
+2022-08-01,OncoShield-A,Oncology,North America,1749,449.5,28690.48,786175.5
+2022-08-01,OncoShield-A,Oncology,Europe,1658,428.85,15517.66,711033.3
+2022-08-01,OncoShield-A,Oncology,Asia Pacific,1239,436.58,18782.66,540922.62
+2022-08-01,OncoShield-A,Oncology,Latin America,796,447.47,10816.97,356186.12
+2022-08-01,NeuroCalm,Neurology,North America,14765,86.64,23004.57,1279239.6
+2022-08-01,NeuroCalm,Neurology,Europe,12765,86.0,18675.58,1097790.0
+2022-08-01,NeuroCalm,Neurology,Asia Pacific,9537,81.01,15993.38,772592.37
+2022-08-01,NeuroCalm,Neurology,Latin America,5796,86.5,10655.01,501354.0
+2022-08-01,ImmunoFlex,Immunology,North America,5954,227.56,26971.93,1354892.24
+2022-08-01,ImmunoFlex,Immunology,Europe,4811,233.63,15891.63,1123993.93
+2022-08-01,ImmunoFlex,Immunology,Asia Pacific,3922,238.53,15177.77,935514.66
+2022-08-01,ImmunoFlex,Immunology,Latin America,2736,235.48,10948.23,644273.28
+2022-08-01,DiabeCare,Endocrinology,North America,21450,63.88,22748.78,1370226.0
+2022-08-01,DiabeCare,Endocrinology,Europe,16357,66.7,22726.34,1091011.9
+2022-08-01,DiabeCare,Endocrinology,Asia Pacific,13251,67.07,14459.99,888744.57
+2022-08-01,DiabeCare,Endocrinology,Latin America,7050,61.79,10497.02,435619.5
+2022-09-01,CardioVasc-X,Cardiology,North America,7334,118.75,18786.68,870912.5
+2022-09-01,CardioVasc-X,Cardiology,Europe,7123,119.38,15559.23,850343.74
+2022-09-01,CardioVasc-X,Cardiology,Asia Pacific,4552,116.73,13491.96,531354.96
+2022-09-01,CardioVasc-X,Cardiology,Latin America,3124,122.02,10662.49,381190.48
+2022-09-01,OncoShield-A,Oncology,North America,2386,444.59,20750.78,1060791.74
+2022-09-01,OncoShield-A,Oncology,Europe,1709,449.06,19129.88,767443.54
+2022-09-01,OncoShield-A,Oncology,Asia Pacific,1039,453.61,11169.76,471300.79
+2022-09-01,OncoShield-A,Oncology,Latin America,874,461.92,15115.28,403718.08
+2022-09-01,NeuroCalm,Neurology,North America,15140,88.87,26924.76,1345491.8
+2022-09-01,NeuroCalm,Neurology,Europe,10672,88.63,17950.78,945859.36
+2022-09-01,NeuroCalm,Neurology,Asia Pacific,7938,84.88,13136.17,673777.44
+2022-09-01,NeuroCalm,Neurology,Latin America,4784,83.36,8516.94,398794.24
+2022-09-01,ImmunoFlex,Immunology,North America,6782,225.66,24928.24,1530426.12
+2022-09-01,ImmunoFlex,Immunology,Europe,5079,224.77,24633.02,1141606.83
+2022-09-01,ImmunoFlex,Immunology,Asia Pacific,3467,222.67,12429.18,771996.89
+2022-09-01,ImmunoFlex,Immunology,Latin America,2367,230.58,8313.53,545782.86
+2022-09-01,DiabeCare,Endocrinology,North America,19079,65.44,21168.42,1248529.76
+2022-09-01,DiabeCare,Endocrinology,Europe,14891,65.33,24190.22,972829.03
+2022-09-01,DiabeCare,Endocrinology,Asia Pacific,11042,67.93,15856.16,750083.06
+2022-09-01,DiabeCare,Endocrinology,Latin America,7650,67.5,12800.19,516375.0
+2022-10-01,CardioVasc-X,Cardiology,North America,8770,121.33,20809.52,1064064.1
+2022-10-01,CardioVasc-X,Cardiology,Europe,7253,124.8,23393.42,905174.4
+2022-10-01,CardioVasc-X,Cardiology,Asia Pacific,5199,123.37,11690.98,641400.63
+2022-10-01,CardioVasc-X,Cardiology,Latin America,3515,119.08,12041.02,418566.2
+2022-10-01,OncoShield-A,Oncology,North America,2274,455.57,20947.52,1035966.18
+2022-10-01,OncoShield-A,Oncology,Europe,1660,435.06,27476.34,722199.6
+2022-10-01,OncoShield-A,Oncology,Asia Pacific,1436,437.25,17535.13,627891.0
+2022-10-01,OncoShield-A,Oncology,Latin America,1005,452.1,12916.01,454360.5
+2022-10-01,NeuroCalm,Neurology,North America,13270,85.8,21509.14,1138566.0
+2022-10-01,NeuroCalm,Neurology,Europe,11583,81.91,20216.8,948763.53
+2022-10-01,NeuroCalm,Neurology,Asia Pacific,10083,84.39,13061.06,850904.37
+2022-10-01,NeuroCalm,Neurology,Latin America,6430,89.18,12401.0,573427.4
+2022-10-01,ImmunoFlex,Immunology,North America,7700,224.81,26963.16,1731037.0
+2022-10-01,ImmunoFlex,Immunology,Europe,4566,226.66,14833.29,1034929.56
+2022-10-01,ImmunoFlex,Immunology,Asia Pacific,3744,220.06,15668.58,823904.64
+2022-10-01,ImmunoFlex,Immunology,Latin America,2649,230.92,9084.73,611707.08
+2022-10-01,DiabeCare,Endocrinology,North America,22632,65.21,25810.35,1475832.72
+2022-10-01,DiabeCare,Endocrinology,Europe,13682,66.1,14560.06,904380.2
+2022-10-01,DiabeCare,Endocrinology,Asia Pacific,13532,64.77,20768.38,876467.64
+2022-10-01,DiabeCare,Endocrinology,Latin America,7556,67.97,10575.1,513581.32
+2022-11-01,CardioVasc-X,Cardiology,North America,9263,116.41,26978.36,1078305.83
+2022-11-01,CardioVasc-X,Cardiology,Europe,7201,119.4,15633.79,859799.4
+2022-11-01,CardioVasc-X,Cardiology,Asia Pacific,6306,121.98,13353.12,769205.88
+2022-11-01,CardioVasc-X,Cardiology,Latin America,3274,115.83,9322.96,379227.42
+2022-11-01,OncoShield-A,Oncology,North America,2489,450.94,30262.96,1122389.66
+2022-11-01,OncoShield-A,Oncology,Europe,1757,461.49,16268.25,810837.93
+2022-11-01,OncoShield-A,Oncology,Asia Pacific,1393,462.69,16074.4,644527.17
+2022-11-01,OncoShield-A,Oncology,Latin America,814,443.71,8202.63,361179.94
+2022-11-01,NeuroCalm,Neurology,North America,15133,84.12,15410.32,1272987.96
+2022-11-01,NeuroCalm,Neurology,Europe,11470,85.13,27385.63,976441.1
+2022-11-01,NeuroCalm,Neurology,Asia Pacific,9995,89.18,15637.24,891354.1
+2022-11-01,NeuroCalm,Neurology,Latin America,6140,88.66,9634.14,544372.4
+2022-11-01,ImmunoFlex,Immunology,North America,6822,227.25,24752.74,1550299.5
+2022-11-01,ImmunoFlex,Immunology,Europe,5506,225.51,21310.89,1241658.06
+2022-11-01,ImmunoFlex,Immunology,Asia Pacific,3832,222.49,15108.41,852581.68
+2022-11-01,ImmunoFlex,Immunology,Latin America,2826,240.94,8273.65,680896.44
+2022-11-01,DiabeCare,Endocrinology,North America,23314,62.61,29643.38,1459689.54
+2022-11-01,DiabeCare,Endocrinology,Europe,17081,66.72,28568.71,1139644.32
+2022-11-01,DiabeCare,Endocrinology,Asia Pacific,11533,64.34,15688.67,742033.22
+2022-11-01,DiabeCare,Endocrinology,Latin America,7496,62.19,9661.55,466176.24
+2022-12-01,CardioVasc-X,Cardiology,North America,10887,125.59,24777.58,1367298.33
+2022-12-01,CardioVasc-X,Cardiology,Europe,7004,120.07,12310.73,840970.28
+2022-12-01,CardioVasc-X,Cardiology,Asia Pacific,5999,121.69,12791.09,730018.31
+2022-12-01,CardioVasc-X,Cardiology,Latin America,3593,121.8,11634.24,437627.4
+2022-12-01,OncoShield-A,Oncology,North America,2775,430.12,23454.13,1193583.0
+2022-12-01,OncoShield-A,Oncology,Europe,1787,432.96,17079.95,773699.52
+2022-12-01,OncoShield-A,Oncology,Asia Pacific,1434,458.65,13817.78,657704.1
+2022-12-01,OncoShield-A,Oncology,Latin America,896,472.35,10532.94,423225.6
+2022-12-01,NeuroCalm,Neurology,North America,18577,83.35,26641.0,1548392.95
+2022-12-01,NeuroCalm,Neurology,Europe,15086,84.37,21173.18,1272805.82
+2022-12-01,NeuroCalm,Neurology,Asia Pacific,9422,83.88,11444.33,790317.36
+2022-12-01,NeuroCalm,Neurology,Latin America,6323,86.99,13036.4,550037.77
+2022-12-01,ImmunoFlex,Immunology,North America,5651,218.94,21675.1,1237229.94
+2022-12-01,ImmunoFlex,Immunology,Europe,5283,221.65,22572.94,1170976.95
+2022-12-01,ImmunoFlex,Immunology,Asia Pacific,4246,218.78,11091.43,928939.88
+2022-12-01,ImmunoFlex,Immunology,Latin America,2715,231.1,8412.38,627436.5
+2022-12-01,DiabeCare,Endocrinology,North America,23702,62.39,30363.2,1478767.78
+2022-12-01,DiabeCare,Endocrinology,Europe,16537,63.86,14656.72,1056052.82
+2022-12-01,DiabeCare,Endocrinology,Asia Pacific,15506,64.19,15205.22,995330.14
+2022-12-01,DiabeCare,Endocrinology,Latin America,7014,66.85,8662.88,468885.9
+2023-01-01,CardioVasc-X,Cardiology,North America,10798,122.26,21347.86,1320163.48
+2023-01-01,CardioVasc-X,Cardiology,Europe,7067,124.09,13171.26,876944.03
+2023-01-01,CardioVasc-X,Cardiology,Asia Pacific,6165,121.91,22679.72,751575.15
+2023-01-01,CardioVasc-X,Cardiology,Latin America,4163,121.37,11146.7,505263.31
+2023-01-01,OncoShield-A,Oncology,North America,2312,434.26,24803.59,1004009.12
+2023-01-01,OncoShield-A,Oncology,Europe,2109,458.11,19707.9,966153.99
+2023-01-01,OncoShield-A,Oncology,Asia Pacific,1475,430.71,14686.14,635297.25
+2023-01-01,OncoShield-A,Oncology,Latin America,1015,440.84,8867.23,447452.6
+2023-01-01,NeuroCalm,Neurology,North America,16259,86.37,30562.87,1404289.83
+2023-01-01,NeuroCalm,Neurology,Europe,11723,81.59,17616.31,956479.57
+2023-01-01,NeuroCalm,Neurology,Asia Pacific,10687,83.0,19600.95,887021.0
+2023-01-01,NeuroCalm,Neurology,Latin America,6961,84.0,11845.06,584724.0
+2023-01-01,ImmunoFlex,Immunology,North America,6934,232.65,23055.29,1613195.1
+2023-01-01,ImmunoFlex,Immunology,Europe,6045,230.7,21849.79,1394581.5
+2023-01-01,ImmunoFlex,Immunology,Asia Pacific,4519,241.04,13804.6,1089259.76
+2023-01-01,ImmunoFlex,Immunology,Latin America,3203,235.71,13637.49,754979.13
+2023-01-01,DiabeCare,Endocrinology,North America,24981,62.58,27299.18,1563310.98
+2023-01-01,DiabeCare,Endocrinology,Europe,16966,63.21,21521.1,1072420.86
+2023-01-01,DiabeCare,Endocrinology,Asia Pacific,11018,64.61,12533.01,711872.98
+2023-01-01,DiabeCare,Endocrinology,Latin America,8761,63.31,11786.57,554658.91
+2023-02-01,CardioVasc-X,Cardiology,North America,10745,124.64,23694.62,1339256.8
+2023-02-01,CardioVasc-X,Cardiology,Europe,8557,123.79,14256.59,1059271.03
+2023-02-01,CardioVasc-X,Cardiology,Asia Pacific,6739,123.06,15404.8,829301.34
+2023-02-01,CardioVasc-X,Cardiology,Latin America,4261,122.74,13204.18,522995.14
+2023-02-01,OncoShield-A,Oncology,North America,2987,435.48,28078.45,1300778.76
+2023-02-01,OncoShield-A,Oncology,Europe,2027,469.68,20750.28,952041.36
+2023-02-01,OncoShield-A,Oncology,Asia Pacific,1522,464.3,17211.51,706664.6
+2023-02-01,OncoShield-A,Oncology,Latin America,890,465.33,10689.77,414143.7
+2023-02-01,NeuroCalm,Neurology,North America,20400,85.77,26322.96,1749708.0
+2023-02-01,NeuroCalm,Neurology,Europe,12595,85.55,12080.29,1077502.25
+2023-02-01,NeuroCalm,Neurology,Asia Pacific,11142,86.16,18338.78,959994.72
+2023-02-01,NeuroCalm,Neurology,Latin America,6913,84.67,9302.45,585323.71
+2023-02-01,ImmunoFlex,Immunology,North America,7172,236.9,23755.26,1699046.8
+2023-02-01,ImmunoFlex,Immunology,Europe,5227,235.36,20494.67,1230226.72
+2023-02-01,ImmunoFlex,Immunology,Asia Pacific,4641,226.67,12125.62,1051975.47
+2023-02-01,ImmunoFlex,Immunology,Latin America,3308,218.62,11215.71,723194.96
+2023-02-01,DiabeCare,Endocrinology,North America,24854,67.98,20899.88,1689574.92
+2023-02-01,DiabeCare,Endocrinology,Europe,15932,62.72,13830.77,999255.04
+2023-02-01,DiabeCare,Endocrinology,Asia Pacific,14412,68.23,18240.09,983330.76
+2023-02-01,DiabeCare,Endocrinology,Latin America,7592,66.44,8888.48,504412.48
+2023-03-01,CardioVasc-X,Cardiology,North America,12723,118.7,26058.12,1510220.1
+2023-03-01,CardioVasc-X,Cardiology,Europe,8752,114.04,26181.53,998078.08
+2023-03-01,CardioVasc-X,Cardiology,Asia Pacific,7388,123.53,11139.61,912639.64
+2023-03-01,CardioVasc-X,Cardiology,Latin America,4172,119.77,11074.64,499680.44
+2023-03-01,OncoShield-A,Oncology,North America,2793,453.6,22123.32,1266904.8
+2023-03-01,OncoShield-A,Oncology,Europe,2586,454.66,26887.78,1175750.76
+2023-03-01,OncoShield-A,Oncology,Asia Pacific,1810,439.64,19314.65,795748.4
+2023-03-01,OncoShield-A,Oncology,Latin America,1181,430.97,10672.45,508975.57
+2023-03-01,NeuroCalm,Neurology,North America,17971,87.42,24088.7,1571024.82
+2023-03-01,NeuroCalm,Neurology,Europe,15354,85.15,23308.04,1307393.1
+2023-03-01,NeuroCalm,Neurology,Asia Pacific,10687,83.54,12370.71,892791.98
+2023-03-01,NeuroCalm,Neurology,Latin America,6936,82.63,8885.03,573121.68
+2023-03-01,ImmunoFlex,Immunology,North America,9150,241.46,32485.83,2209359.0
+2023-03-01,ImmunoFlex,Immunology,Europe,6503,228.19,20337.72,1483919.57
+2023-03-01,ImmunoFlex,Immunology,Asia Pacific,5305,221.22,19946.19,1173572.1
+2023-03-01,ImmunoFlex,Immunology,Latin America,3110,227.33,13140.09,706996.3
+2023-03-01,DiabeCare,Endocrinology,North America,31185,62.95,34336.87,1963095.75
+2023-03-01,DiabeCare,Endocrinology,Europe,16778,61.92,14065.08,1038893.76
+2023-03-01,DiabeCare,Endocrinology,Asia Pacific,13283,63.69,16482.97,845994.27
+2023-03-01,DiabeCare,Endocrinology,Latin America,9841,67.22,12895.46,661512.02
+2023-04-01,CardioVasc-X,Cardiology,North America,11751,119.5,27659.89,1404244.5
+2023-04-01,CardioVasc-X,Cardiology,Europe,8676,114.97,15327.51,997479.72
+2023-04-01,CardioVasc-X,Cardiology,Asia Pacific,8189,119.24,16036.26,976456.36
+2023-04-01,CardioVasc-X,Cardiology,Latin America,4932,115.91,12685.38,571668.12
+2023-04-01,OncoShield-A,Oncology,North America,2837,461.31,20074.77,1308736.47
+2023-04-01,OncoShield-A,Oncology,Europe,2217,430.6,21101.65,954640.2
+2023-04-01,OncoShield-A,Oncology,Asia Pacific,1689,439.28,15802.0,741943.92
+2023-04-01,OncoShield-A,Oncology,Latin America,1083,438.73,11513.3,475144.59
+2023-04-01,NeuroCalm,Neurology,North America,18666,84.57,29666.48,1578583.62
+2023-04-01,NeuroCalm,Neurology,Europe,14203,81.28,17634.71,1154419.84
+2023-04-01,NeuroCalm,Neurology,Asia Pacific,11469,83.7,8306.83,959955.3
+2023-04-01,NeuroCalm,Neurology,Latin America,7388,85.51,11281.22,631747.88
+2023-04-01,ImmunoFlex,Immunology,North America,7557,235.31,17244.56,1778237.67
+2023-04-01,ImmunoFlex,Immunology,Europe,6375,231.5,15331.51,1475812.5
+2023-04-01,ImmunoFlex,Immunology,Asia Pacific,5075,232.5,17629.24,1179937.5
+2023-04-01,ImmunoFlex,Immunology,Latin America,3065,221.98,9011.9,680368.7
+2023-04-01,DiabeCare,Endocrinology,North America,24015,67.28,21398.13,1615729.2
+2023-04-01,DiabeCare,Endocrinology,Europe,24943,62.5,23718.98,1558937.5
+2023-04-01,DiabeCare,Endocrinology,Asia Pacific,16865,62.19,17507.93,1048834.35
+2023-04-01,DiabeCare,Endocrinology,Latin America,11580,62.28,11565.89,721202.4
+2023-05-01,CardioVasc-X,Cardiology,North America,8724,115.99,19819.33,1011896.76
+2023-05-01,CardioVasc-X,Cardiology,Europe,10230,118.94,18045.28,1216756.2
+2023-05-01,CardioVasc-X,Cardiology,Asia Pacific,8410,114.75,18227.13,965047.5
+2023-05-01,CardioVasc-X,Cardiology,Latin America,4656,119.51,13834.0,556438.56
+2023-05-01,OncoShield-A,Oncology,North America,2603,434.91,21969.74,1132070.73
+2023-05-01,OncoShield-A,Oncology,Europe,2092,450.87,24429.5,943220.04
+2023-05-01,OncoShield-A,Oncology,Asia Pacific,1684,467.08,17266.74,786562.72
+2023-05-01,OncoShield-A,Oncology,Latin America,1119,447.81,10032.98,501099.39
+2023-05-01,NeuroCalm,Neurology,North America,19593,85.33,29685.19,1671870.69
+2023-05-01,NeuroCalm,Neurology,Europe,13846,86.33,15963.61,1195325.18
+2023-05-01,NeuroCalm,Neurology,Asia Pacific,12254,87.34,14835.75,1070264.36
+2023-05-01,NeuroCalm,Neurology,Latin America,7074,87.49,6853.46,618904.26
+2023-05-01,ImmunoFlex,Immunology,North America,9732,236.85,34681.52,2305024.2
+2023-05-01,ImmunoFlex,Immunology,Europe,6322,230.76,22857.37,1458864.72
+2023-05-01,ImmunoFlex,Immunology,Asia Pacific,4695,236.75,17791.1,1111541.25
+2023-05-01,ImmunoFlex,Immunology,Latin America,3100,239.34,12615.61,741954.0
+2023-05-01,DiabeCare,Endocrinology,North America,24991,62.95,23539.95,1573183.45
+2023-05-01,DiabeCare,Endocrinology,Europe,21085,62.74,21004.29,1322872.9
+2023-05-01,DiabeCare,Endocrinology,Asia Pacific,15106,62.29,22909.07,940952.74
+2023-05-01,DiabeCare,Endocrinology,Latin America,10157,65.03,11226.66,660509.71
+2023-06-01,CardioVasc-X,Cardiology,North America,11774,125.81,24970.82,1481286.94
+2023-06-01,CardioVasc-X,Cardiology,Europe,9915,115.99,24518.07,1150040.85
+2023-06-01,CardioVasc-X,Cardiology,Asia Pacific,7296,115.95,15701.94,845971.2
+2023-06-01,CardioVasc-X,Cardiology,Latin America,4231,120.33,10946.18,509116.23
+2023-06-01,OncoShield-A,Oncology,North America,2873,431.07,28316.64,1238464.11
+2023-06-01,OncoShield-A,Oncology,Europe,2096,466.12,16726.08,976987.52
+2023-06-01,OncoShield-A,Oncology,Asia Pacific,1812,459.46,16862.1,832541.52
+2023-06-01,OncoShield-A,Oncology,Latin America,869,464.47,10214.54,403624.43
+2023-06-01,NeuroCalm,Neurology,North America,15862,84.95,14606.59,1347476.9
+2023-06-01,NeuroCalm,Neurology,Europe,14553,82.23,17950.28,1196693.19
+2023-06-01,NeuroCalm,Neurology,Asia Pacific,11621,81.61,19055.02,948389.81
+2023-06-01,NeuroCalm,Neurology,Latin America,6611,83.71,9645.51,553406.81
+2023-06-01,ImmunoFlex,Immunology,North America,8282,233.48,33573.03,1933681.36
+2023-06-01,ImmunoFlex,Immunology,Europe,6261,237.85,13882.68,1489178.85
+2023-06-01,ImmunoFlex,Immunology,Asia Pacific,4803,233.09,17629.67,1119531.27
+2023-06-01,ImmunoFlex,Immunology,Latin America,2854,225.98,11685.05,644946.92
+2023-06-01,DiabeCare,Endocrinology,North America,25004,62.89,23017.07,1572501.56
+2023-06-01,DiabeCare,Endocrinology,Europe,19379,67.19,18334.26,1302075.01
+2023-06-01,DiabeCare,Endocrinology,Asia Pacific,13673,66.26,19155.11,905972.98
+2023-06-01,DiabeCare,Endocrinology,Latin America,9236,63.13,6663.95,583068.68
+2023-07-01,CardioVasc-X,Cardiology,North America,11057,124.45,28143.9,1376043.65
+2023-07-01,CardioVasc-X,Cardiology,Europe,8657,121.98,22954.06,1055980.86
+2023-07-01,CardioVasc-X,Cardiology,Asia Pacific,6315,122.05,17750.97,770745.75
+2023-07-01,CardioVasc-X,Cardiology,Latin America,4015,119.36,8823.69,479230.4
+2023-07-01,OncoShield-A,Oncology,North America,2652,452.1,31171.56,1198969.2
+2023-07-01,OncoShield-A,Oncology,Europe,1932,432.48,21066.47,835551.36
+2023-07-01,OncoShield-A,Oncology,Asia Pacific,1493,460.8,14649.7,687974.4
+2023-07-01,OncoShield-A,Oncology,Latin America,999,466.13,10452.18,465663.87
+2023-07-01,NeuroCalm,Neurology,North America,17079,87.16,28139.81,1488605.64
+2023-07-01,NeuroCalm,Neurology,Europe,12662,83.14,23615.99,1052718.68
+2023-07-01,NeuroCalm,Neurology,Asia Pacific,11804,81.57,17611.41,962852.28
+2023-07-01,NeuroCalm,Neurology,Latin America,6083,85.84,6813.62,522164.72
+2023-07-01,ImmunoFlex,Immunology,North America,6543,235.59,20142.66,1541465.37
+2023-07-01,ImmunoFlex,Immunology,Europe,6107,232.14,21769.8,1417678.98
+2023-07-01,ImmunoFlex,Immunology,Asia Pacific,4383,236.78,16063.53,1037806.74
+2023-07-01,ImmunoFlex,Immunology,Latin America,2729,241.4,11119.33,658780.6
+2023-07-01,DiabeCare,Endocrinology,North America,25748,62.16,25878.39,1600495.68
+2023-07-01,DiabeCare,Endocrinology,Europe,19520,62.5,21445.82,1220000.0
+2023-07-01,DiabeCare,Endocrinology,Asia Pacific,14966,67.46,19606.12,1009606.36
+2023-07-01,DiabeCare,Endocrinology,Latin America,10950,64.55,12366.56,706822.5
+2023-08-01,CardioVasc-X,Cardiology,North America,8261,123.29,22309.08,1018498.69
+2023-08-01,CardioVasc-X,Cardiology,Europe,7835,119.32,23739.41,934872.2
+2023-08-01,CardioVasc-X,Cardiology,Asia Pacific,6849,121.1,21820.52,829413.9
+2023-08-01,CardioVasc-X,Cardiology,Latin America,3920,120.15,8768.28,470988.0
+2023-08-01,OncoShield-A,Oncology,North America,2203,449.45,24403.55,990138.35
+2023-08-01,OncoShield-A,Oncology,Europe,1839,454.53,21877.74,835880.67
+2023-08-01,OncoShield-A,Oncology,Asia Pacific,1617,456.03,16643.89,737400.51
+2023-08-01,OncoShield-A,Oncology,Latin America,888,443.78,10767.83,394076.64
+2023-08-01,NeuroCalm,Neurology,North America,15468,81.94,22526.25,1267447.92
+2023-08-01,NeuroCalm,Neurology,Europe,9903,82.42,19278.55,816205.26
+2023-08-01,NeuroCalm,Neurology,Asia Pacific,9630,82.51,11534.42,794571.3
+2023-08-01,NeuroCalm,Neurology,Latin America,6002,80.82,10549.14,485081.64
+2023-08-01,ImmunoFlex,Immunology,North America,6460,236.96,24079.39,1530761.6
+2023-08-01,ImmunoFlex,Immunology,Europe,6475,225.25,22103.26,1458493.75
+2023-08-01,ImmunoFlex,Immunology,Asia Pacific,4351,220.5,15971.56,959395.5
+2023-08-01,ImmunoFlex,Immunology,Latin America,2644,226.44,9050.32,598707.36
+2023-08-01,DiabeCare,Endocrinology,North America,22879,64.96,31190.17,1486219.84
+2023-08-01,DiabeCare,Endocrinology,Europe,15371,64.31,18556.92,988509.01
+2023-08-01,DiabeCare,Endocrinology,Asia Pacific,10805,67.65,10549.64,730958.25
+2023-08-01,DiabeCare,Endocrinology,Latin America,9439,63.76,12698.45,601830.64
+2023-09-01,CardioVasc-X,Cardiology,North America,9340,117.09,23318.7,1093620.6
+2023-09-01,CardioVasc-X,Cardiology,Europe,6760,122.24,20868.87,826342.4
+2023-09-01,CardioVasc-X,Cardiology,Asia Pacific,5171,119.47,15702.56,617779.37
+2023-09-01,CardioVasc-X,Cardiology,Latin America,3414,119.03,9097.47,406368.42
+2023-09-01,OncoShield-A,Oncology,North America,2262,431.11,25134.89,975170.82
+2023-09-01,OncoShield-A,Oncology,Europe,1704,457.59,22357.74,779733.36
+2023-09-01,OncoShield-A,Oncology,Asia Pacific,1452,454.21,12974.99,659512.92
+2023-09-01,OncoShield-A,Oncology,Latin America,910,466.82,11519.88,424806.2
+2023-09-01,NeuroCalm,Neurology,North America,15116,88.42,22650.79,1336556.72
+2023-09-01,NeuroCalm,Neurology,Europe,10666,81.96,20517.94,874185.36
+2023-09-01,NeuroCalm,Neurology,Asia Pacific,8820,83.26,16483.47,734353.2
+2023-09-01,NeuroCalm,Neurology,Latin America,5772,81.12,16987.82,468224.64
+2023-09-01,ImmunoFlex,Immunology,North America,6090,226.39,26637.76,1378715.1
+2023-09-01,ImmunoFlex,Immunology,Europe,5620,237.95,23751.21,1337279.0
+2023-09-01,ImmunoFlex,Immunology,Asia Pacific,4403,233.98,14449.08,1030213.94
+2023-09-01,ImmunoFlex,Immunology,Latin America,2233,236.65,8974.23,528439.45
+2023-09-01,DiabeCare,Endocrinology,North America,21467,67.1,33001.1,1440435.7
+2023-09-01,DiabeCare,Endocrinology,Europe,13800,65.53,12901.68,904314.0
+2023-09-01,DiabeCare,Endocrinology,Asia Pacific,11100,66.34,20922.53,736374.0
+2023-09-01,DiabeCare,Endocrinology,Latin America,8596,62.83,8879.24,540086.68
+2023-10-01,CardioVasc-X,Cardiology,North America,9712,124.68,20217.88,1210892.16
+2023-10-01,CardioVasc-X,Cardiology,Europe,7263,114.31,16461.87,830233.53
+2023-10-01,CardioVasc-X,Cardiology,Asia Pacific,7111,118.09,21060.66,839737.99
+2023-10-01,CardioVasc-X,Cardiology,Latin America,3680,117.73,10789.9,433246.4
+2023-10-01,OncoShield-A,Oncology,North America,2917,443.91,30967.52,1294885.47
+2023-10-01,OncoShield-A,Oncology,Europe,1912,433.82,28111.12,829463.84
+2023-10-01,OncoShield-A,Oncology,Asia Pacific,1458,450.25,15106.06,656464.5
+2023-10-01,OncoShield-A,Oncology,Latin America,968,429.25,10897.76,415514.0
+2023-10-01,NeuroCalm,Neurology,North America,16017,82.11,25499.58,1315155.87
+2023-10-01,NeuroCalm,Neurology,Europe,11349,88.4,13037.91,1003251.6
+2023-10-01,NeuroCalm,Neurology,Asia Pacific,9793,85.88,19013.59,841022.84
+2023-10-01,NeuroCalm,Neurology,Latin America,5348,83.64,7699.24,447306.72
+2023-10-01,ImmunoFlex,Immunology,North America,6969,231.24,19759.87,1611511.56
+2023-10-01,ImmunoFlex,Immunology,Europe,5848,237.67,26811.61,1389894.16
+2023-10-01,ImmunoFlex,Immunology,Asia Pacific,3916,224.46,10676.47,878985.36
+2023-10-01,ImmunoFlex,Immunology,Latin America,2486,240.73,8318.26,598454.78
+2023-10-01,DiabeCare,Endocrinology,North America,22172,65.52,15682.47,1452709.44
+2023-10-01,DiabeCare,Endocrinology,Europe,15499,65.82,19694.78,1020144.18
+2023-10-01,DiabeCare,Endocrinology,Asia Pacific,12295,68.21,8242.67,838641.95
+2023-10-01,DiabeCare,Endocrinology,Latin America,9286,65.45,11774.39,607768.7
+2023-11-01,CardioVasc-X,Cardiology,North America,10504,118.74,19684.89,1247244.96
+2023-11-01,CardioVasc-X,Cardiology,Europe,7621,120.52,20386.76,918482.92
+2023-11-01,CardioVasc-X,Cardiology,Asia Pacific,6622,120.4,17632.86,797288.8
+2023-11-01,CardioVasc-X,Cardiology,Latin America,4082,123.53,10378.06,504249.46
+2023-11-01,OncoShield-A,Oncology,North America,2542,469.98,29349.29,1194689.16
+2023-11-01,OncoShield-A,Oncology,Europe,1730,471.64,19999.22,815937.2
+2023-11-01,OncoShield-A,Oncology,Asia Pacific,1563,453.99,20560.56,709586.37
+2023-11-01,OncoShield-A,Oncology,Latin America,874,436.65,7947.47,381632.1
+2023-11-01,NeuroCalm,Neurology,North America,18437,85.1,22994.32,1568988.7
+2023-11-01,NeuroCalm,Neurology,Europe,13669,88.11,31651.46,1204375.59
+2023-11-01,NeuroCalm,Neurology,Asia Pacific,10354,87.78,16597.01,908874.12
+2023-11-01,NeuroCalm,Neurology,Latin America,7264,88.88,12115.39,645624.32
+2023-11-01,ImmunoFlex,Immunology,North America,7300,238.14,25073.9,1738422.0
+2023-11-01,ImmunoFlex,Immunology,Europe,5721,239.04,25292.65,1367547.84
+2023-11-01,ImmunoFlex,Immunology,Asia Pacific,3450,232.91,18773.37,803539.5
+2023-11-01,ImmunoFlex,Immunology,Latin America,2870,235.12,15566.43,674794.4
+2023-11-01,DiabeCare,Endocrinology,North America,23407,63.7,22069.1,1491025.9
+2023-11-01,DiabeCare,Endocrinology,Europe,17492,63.56,25208.9,1111791.52
+2023-11-01,DiabeCare,Endocrinology,Asia Pacific,14911,63.67,19980.18,949383.37
+2023-11-01,DiabeCare,Endocrinology,Latin America,9452,62.68,12339.91,592451.36
