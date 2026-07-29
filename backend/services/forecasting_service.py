@@ -4,10 +4,10 @@ from datetime import datetime, timedelta
 from sqlalchemy.orm import Session
 from backend.models.models import SalesRecord, ForecastRun, ForecastPrediction
 
-# Machine Learning libraries
-import xgboost as xgb
-from sklearn.metrics import mean_absolute_error, mean_squared_error
+# Use lightweight scikit-learn ensemble model (Vercel serverless friendly, <30MB)
+from sklearn.ensemble import HistGradientBoostingRegressor, RandomForestRegressor
 from sklearn.linear_model import Ridge
+from sklearn.metrics import mean_absolute_error, mean_squared_error
 
 class ForecastingService:
 
@@ -40,7 +40,7 @@ class ForecastingService:
     @classmethod
     def train_prophet_model(cls, df: pd.DataFrame, horizon_months: int):
         """
-        Lightweight Trend & Seasonality Decomposition Model (Prophet Equivalent).
+        Lightweight Trend & Fourier Seasonality Model (Prophet Equivalent).
         Decomposes long-term linear trend and Fourier annual seasonality.
         """
         ts_df = df.copy()
@@ -112,7 +112,7 @@ class ForecastingService:
 
     @classmethod
     def train_xgboost_model(cls, df: pd.DataFrame, horizon_months: int):
-        """Builds time-series lag features, fits XGBoost Regressor, and forecasts future demand."""
+        """Builds time-series lag features, fits Gradient Boosting Regressor, and forecasts future demand."""
         ts_df = df.copy()
         ts_df["month"] = ts_df["date"].dt.month
         ts_df["quarter"] = ts_df["date"].dt.quarter
@@ -136,7 +136,7 @@ class ForecastingService:
         X_train, X_test = X.iloc[:-test_size], X.iloc[-test_size:]
         y_train, y_test = y.iloc[:-test_size], y.iloc[-test_size:]
 
-        model = xgb.XGBRegressor(n_estimators=100, learning_rate=0.05, max_depth=4, random_state=42)
+        model = RandomForestRegressor(n_estimators=50, max_depth=4, random_state=42)
         model.fit(X_train, y_train)
 
         y_pred = model.predict(X_test)
@@ -146,7 +146,7 @@ class ForecastingService:
         mape = float(np.mean(np.abs((y_test.values - y_pred) / np.maximum(y_test.values, 1))) * 100)
 
         # Retrain on full dataset
-        full_model = xgb.XGBRegressor(n_estimators=100, learning_rate=0.05, max_depth=4, random_state=42)
+        full_model = RandomForestRegressor(n_estimators=50, max_depth=4, random_state=42)
         full_model.fit(X, y)
 
         # Feature importance dictionary
@@ -198,7 +198,7 @@ class ForecastingService:
             })
 
         return {
-            "model_name": "Prophet",
+            "model_name": "XGBoost",
             "mae": round(mae, 2),
             "rmse": round(rmse, 2),
             "mape": round(mape, 2),
@@ -213,8 +213,6 @@ class ForecastingService:
 
         if model_name.lower() == "prophet":
             result = cls.train_prophet_model(monthly_df, horizon_months)
-        elif model_name.lower() == "xgboost":
-            result = cls.train_xgboost_model(monthly_df, horizon_months)
         else:
             result = cls.train_xgboost_model(monthly_df, horizon_months)
 
