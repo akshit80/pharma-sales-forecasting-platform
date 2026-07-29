@@ -1,9 +1,14 @@
 import os
-from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
 from backend.database.database import Base, engine
 from backend.api.router import api_router
+from backend.api.datasets import router as datasets_router
+from backend.api.eda import router as eda_router
+from backend.api.forecast import router as forecast_router
+from backend.api.scenarios import router as scenarios_router
+from backend.api.reports import router as reports_router
 
 # Auto-create database tables
 Base.metadata.create_all(bind=engine)
@@ -22,16 +27,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Include router for both /api/v1 and root paths for Vercel rewrite compatibility
+# Mount API routers at both /api/v1 and root level for maximum Vercel URL resilience
 app.include_router(api_router)
-
-# Direct dataset routes without prefix fallback for Vercel
-from backend.api.datasets import router as datasets_router
-from backend.api.eda import router as eda_router
-from backend.api.forecast import router as forecast_router
-from backend.api.scenarios import router as scenarios_router
-from backend.api.reports import router as reports_router
-
 app.include_router(datasets_router)
 app.include_router(eda_router)
 app.include_router(forecast_router)
@@ -176,7 +173,6 @@ def get_html_dashboard():
             let currentDatasetId = null;
 
             async function apiFetch(path, options={}) {
-                // Try relative path first, then /api/v1 path fallback
                 let res = await fetch(path, options);
                 if (res.status === 404 && !path.startsWith('/api/v1')) {
                     res = await fetch('/api/v1' + path, options);
@@ -285,11 +281,4 @@ def get_html_dashboard():
 
 @app.get("/", response_class=HTMLResponse)
 def serve_root():
-    return HTMLResponse(content=get_html_dashboard())
-
-@app.exception_handler(404)
-async def custom_404_handler(request: Request, exc):
-    path = request.url.path
-    if path.startswith("/datasets") or path.startswith("/eda") or path.startswith("/forecast") or path.startswith("/scenarios") or path.startswith("/reports") or path.startswith("/docs") or path.startswith("/openapi"):
-        return JSONResponse(content={"detail": "Not Found"}, status_code=404)
     return HTMLResponse(content=get_html_dashboard())
