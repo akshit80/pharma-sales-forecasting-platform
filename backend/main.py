@@ -1,6 +1,6 @@
 import os
 from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from backend.database.database import Base, engine
 from backend.api.router import api_router
@@ -27,7 +27,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Mount API routers at both /api/v1 and root level for maximum Vercel URL resilience
+# Mount API routers first
 app.include_router(api_router)
 app.include_router(datasets_router)
 app.include_router(eda_router)
@@ -280,9 +280,10 @@ def get_html_dashboard():
     """
 
 @app.get("/", response_class=HTMLResponse)
-@app.get("/api", response_class=HTMLResponse)
-@app.get("/api/", response_class=HTMLResponse)
-@app.get("/api/index.py", response_class=HTMLResponse)
-@app.get("/index.py", response_class=HTMLResponse)
 def serve_root():
+    return HTMLResponse(content=get_html_dashboard())
+
+@app.get("/{path:path}", response_class=HTMLResponse)
+def catch_all_dashboard(path: str):
+    """Catch-all route handler serving HTML dashboard for any non-API Vercel path."""
     return HTMLResponse(content=get_html_dashboard())
