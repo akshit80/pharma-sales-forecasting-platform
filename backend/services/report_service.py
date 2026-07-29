@@ -11,6 +11,8 @@ from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, KeepTogether
 
+IS_VERCEL = os.getenv("VERCEL") == "1" or os.getenv("AWS_LAMBDA_FUNCTION_NAME") is not None or not os.access(".", os.W_OK)
+
 class ReportService:
 
     @classmethod
@@ -22,9 +24,10 @@ class ReportService:
         forecast = ForecastingService.run_forecast(db, dataset_id, model_name, horizon_months)
         recommendations = DecisionService.generate_recommendations(db, dataset_id)
 
-        os.makedirs("data/reports", exist_ok=True)
+        target_dir = "/tmp/reports" if IS_VERCEL else "data/reports"
+        os.makedirs(target_dir, exist_ok=True)
         report_filename = f"executive_report_{dataset_id[:8]}_{int(datetime.utcnow().timestamp())}.pdf"
-        output_path = os.path.join("data/reports", report_filename)
+        output_path = os.path.join(target_dir, report_filename)
 
         doc = SimpleDocTemplate(
             output_path,
@@ -37,9 +40,8 @@ class ReportService:
 
         styles = getSampleStyleSheet()
 
-        # Custom Palette Styles
-        primary_color = colors.HexColor("#1E3A8A")   # Deep Navy
-        secondary_color = colors.HexColor("#0D9488") # Teal accent
+        primary_color = colors.HexColor("#1E3A8A")
+        secondary_color = colors.HexColor("#0D9488")
         dark_text = colors.HexColor("#1F2937")
 
         title_style = ParagraphStyle(
@@ -80,14 +82,10 @@ class ReportService:
 
         elements = []
 
-        # Header Title
         elements.append(Paragraph("Pharmaceutical Demand Forecast & Executive Strategy Report", title_style))
         elements.append(Paragraph(f"Generated on: {datetime.utcnow().strftime('%B %d, %Y')} | Dataset ID: {dataset_id}", subtitle_style))
         elements.append(Spacer(1, 10))
 
-        # -------------------------------------------------------------
-        # Section 1: Executive KPI Summary
-        # -------------------------------------------------------------
         elements.append(Paragraph("1. Executive Summary KPIs", h2_style))
 
         kpi_data = [
@@ -115,9 +113,6 @@ class ReportService:
         elements.append(kpi_table)
         elements.append(Spacer(1, 15))
 
-        # -------------------------------------------------------------
-        # Section 2: Demand Forecast Performance & Projection
-        # -------------------------------------------------------------
         elements.append(Paragraph(f"2. Demand Forecast Projections ({model_name} Model - {horizon_months} Months)", h2_style))
         
         metrics_text = f"<b>Model Performance:</b> MAE = {forecast['mae']} | RMSE = {forecast['rmse']} | <b>MAPE = {forecast['mape']}%</b>"
@@ -146,9 +141,6 @@ class ReportService:
         elements.append(fc_table)
         elements.append(Spacer(1, 15))
 
-        # -------------------------------------------------------------
-        # Section 3: Commercial Decision Intelligence Recommendations
-        # -------------------------------------------------------------
         elements.append(Paragraph("3. Commercial Decision Intelligence & Recommendations", h2_style))
 
         rec_table_data = [["Category", "Priority", "Strategic Recommendation", "Expected Impact"]]
@@ -172,7 +164,6 @@ class ReportService:
 
         doc.build(elements)
 
-        # Record in database
         report = Report(
             dataset_id=dataset_id,
             file_path=output_path

@@ -2,8 +2,14 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
-# PostgreSQL URL from environment or fallback to local SQLite database
-DEFAULT_DB_URL = "sqlite:///./pharma_analytics.db"
+# Detect Vercel serverless read-only environment
+IS_VERCEL = os.getenv("VERCEL") == "1" or os.getenv("AWS_LAMBDA_FUNCTION_NAME") is not None or not os.access(".", os.W_OK)
+
+if IS_VERCEL:
+    DEFAULT_DB_URL = "sqlite:////tmp/pharma_analytics.db"
+else:
+    DEFAULT_DB_URL = "sqlite:///./pharma_analytics.db"
+
 DATABASE_URL = os.getenv("DATABASE_URL", DEFAULT_DB_URL)
 
 try:
@@ -13,8 +19,7 @@ try:
     else:
         engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
 except Exception:
-    # Fallback to SQLite if PostgreSQL connection/driver fails in local dev environment
-    DATABASE_URL = DEFAULT_DB_URL
+    DATABASE_URL = "sqlite:////tmp/pharma_analytics.db"
     engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
